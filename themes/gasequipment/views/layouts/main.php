@@ -40,9 +40,6 @@
 
 <?php \yupe\components\TemplateEvent::fire(DefautThemeEvents::BODY_START);?>
 
-<?php if (Yii::app()->hasModule('menu')): ?>
-    <?php $this->widget('application.modules.menu.widgets.MenuWidget', ['name' => 'top-menu']); ?>
-<?php endif; ?>
 <header class="default-header">
     <div class="sticky-header">
         <div class="container">
@@ -51,6 +48,10 @@
                     <a href="#top" class="smooth"><img src="img/logo.png" alt=""></a>
                 </div>
                 <div class="right-bar d-flex align-items-center">
+                    <?php if (Yii::app()->hasModule('menu')): ?>
+                        <?php $this->widget('application.modules.menu.widgets.MenuWidget', ['name' => 'top-menu']); ?>
+                    <?php endif; ?>
+                    <?/*
                     <nav class="d-flex align-items-center">
                         <ul class="main-menu">
                             <li><a href="#top">Home</a></li>
@@ -62,6 +63,7 @@
                         </ul>
                         <a href="#" class="mobile-btn"><span class="lnr lnr-menu"></span></a>
                     </nav>
+                    */?>
                     <div class="search relative">
                         <span class="lnr lnr-magnifier"></span>
                         <form action="#" class="search-field">
