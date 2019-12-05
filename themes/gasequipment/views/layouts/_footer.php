@@ -1,71 +1,71 @@
-<div class="row">
-    <div class="col-lg-12">
-        <div class="col-sm-3">
-            <ul class="nav nav-pills nav-stacked">
-                <li><a href="https://twitter.com/yupecms" target="_blank"><?= Yii::t(
-                            'default',
-                            'Twitter'
-                        ); ?></a>
-                </li>
-                <li><a href="http://vk.com/amylabs" target="_blank"><?= Yii::t('default', 'Vk.com'); ?></a></li>
-                <li><a href="https://www.facebook.com/amylabs.ru"
-                       target="_blank"><?= Yii::t('default', 'Facebook'); ?></a></li>
-                <li><a href="https://plus.google.com/+AmylabsRu"
-                       target="_blank"><?= Yii::t('default', 'Google+'); ?></a></li>
-                <li><a href="https://yupe.ru/blogs/yupe-mini-cms-yii"
-                       target="_blank"><?= Yii::t('default', 'Blog'); ?></a></li>
-                <li><a href="https://yupe.ru/" target="_blank"><?= Yii::t('default', 'Our site'); ?></a></li>
-            </ul>
+<footer class="section-full">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6">
+                <div class="single-footer-widget">
+                    <h6 class="text-white text-uppercase mb-20">About Agency</h6>
+                    <p>The world has become so fast paced that people don’t want to stand by reading a page of information, they would much rather look at a presentation and understand the message. It has come to a point </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="single-footer-widget">
+                    <h6 class="text-white text-uppercase mb-20">Navigation Links</h6>
+                    <div class="d-flex">
+                        <ul class="footer-nav">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Portfolio</a></li>
+                        </ul>
+                        <ul class="ml-30 footer-nav">
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="single-footer-widget">
+                    <h6 class="text-white text-uppercase mb-20">Newsletter</h6>
+                    <p>For business professionals caught between high OEM price and mediocre print and graphic output,</p>
+                    <div id="mc_embed_signup">
+                        <form target="_blank" novalidate action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&id=92a4423d01" method="get" class="subscription relative d-flex justify-content-center">
+                            <input type="email" name="EMAIL" placeholder="Email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'" required>
+                            <div style="position: absolute; left: -5000px;">
+                                <input type="text" name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="">
+                            </div>
+                            <button type="submit" class="newsletter-btn" name="subscribe"><span class="lnr lnr-location"></span></button>
+                            <div class="info"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="single-footer-widget">
+                    <h6 class="text-white text-uppercase mb-20">Instafeed</h6>
+                    <ul class="instafeed d-flex flex-wrap">
+                        <li><img src="img/i1.jpg" alt=""></li>
+                        <li><img src="img/i2.jpg" alt=""></li>
+                        <li><img src="img/i3.jpg" alt=""></li>
+                        <li><img src="img/i4.jpg" alt=""></li>
+                        <li><img src="img/i5.jpg" alt=""></li>
+                        <li><img src="img/i6.jpg" alt=""></li>
+                        <li><img src="img/i7.jpg" alt=""></li>
+                        <li><img src="img/i8.jpg" alt=""></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="col-sm-3">
-            <ul class="nav nav-pills nav-stacked">
-                <li><a href="https://yupe.ru/docs/index.html"
-                       target="_blank"><?= Yii::t('default', 'Documentation'); ?></a></li>
-                <li><a href="http://api.yupe.ru/" target="_blank"><?= Yii::t('default', 'API'); ?></a></li>
-                <li><a href="http://talk.yupe.ru/" target="_blank"><?= Yii::t('default', 'Forum'); ?></a></li>
-                <li><a href="https://yupe.ru/faq/" target="_blank"><?= Yii::t('default', 'FAQ'); ?></a></li>
-                <li><a href="https://yupe.ru/contacts?from=footer"
-                       target="_blank"><?= Yii::t('default', 'Contacts'); ?></a></li>
-            </ul>
-        </div>
-        <div class="col-sm-3">
-            <ul class="nav nav-pills nav-stacked">
-                <li><a href="https://yupe.ru/about"
-                       target="_blank"><?= Yii::t('default', 'About project'); ?></a></li>
-                <li><a href="https://yupe.ru/docs/yupe/team.html"
-                       target="_blank"><?= Yii::t('default', 'Team'); ?></a></li>
-                <li><a href="https://github.com/yupe/yupe/" target="_blank"><?= Yii::t(
-                            'default',
-                            'GitHub'
-                        ); ?></a>
-                </li>
-                <li><a href="https://github.com/yupe/yupe-ext/"
-                       target="_blank"><?= Yii::t('default', 'Extensions'); ?></a></li>
-                <li><a href="https://yupe.ru/docs/yupe/capability.html"
-                       target="_blank"><?= Yii::t('default', 'Facilities'); ?></a></li>
-                <li><a href="https://yupe.ru/docs/yupe/assistance.project.html"
-                       target="_blank"><?= Yii::t('default', 'How to help us'); ?></a></li>
-            </ul>
-        </div>
-        <div class="col-sm-3">
-            <ul class="nav nav-pills nav-stacked">
-                <li><a href="http://allframeworks.ru" target="_blank"><?= Yii::t(
-                            'default',
-                            'allframeworks'
-                        ); ?></a>
-                </li>
-                <li><a href="http://amylabs.ru" target="_blank"><?= Yii::t('default', 'amylabs'); ?></a></li>
-                <li><a href="https://yupe.ru/service/support?from=yupe"
-                       target="_blank"><?= Yii::t('default', 'Commertial support'); ?></a></li>
-            </ul>
+        <div class="footer-bottom d-flex justify-content-between align-items-center">
+            <p class="footer-text m-0">Copyright &copy; 2017  |  All rights reserved to <a href="#">Datarc inc.</a> Designed by <a href="https://colorlib.com/wp">Colorlib</a>.</p>
+            <div class="footer-social d-flex align-items-center">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-dribbble"></i></a>
+                <a href="#"><i class="fa fa-behance"></i></a>
+            </div>
         </div>
     </div>
-</div>
-<hr>
-<div class="row">
-    <div class="col-lg-12">
-        <ul class="nav nav-pills nav-stacked">
-            <li>© 2012 - <?= date('Y'); ?></li>
-        </ul>
-    </div>
-</div>
+</footer>
