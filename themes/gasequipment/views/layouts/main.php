@@ -48,9 +48,6 @@
                     <a href="#top" class="smooth"><img src="img/logo.png" alt=""></a>
                 </div>
                 <div class="right-bar d-flex align-items-center">
-                    <?php if (Yii::app()->hasModule('menu')): ?>
-                        <?php $this->widget('application.modules.menu.widgets.MenuWidget', ['name' => 'top-menu']); ?>
-                    <?php endif; ?>
                     <?/*
                     <nav class="d-flex align-items-center">
                         <ul class="main-menu">
@@ -80,6 +77,9 @@
             </div>
         </div>
     </div>
+    <?php if (Yii::app()->hasModule('menu')): ?>
+        <?php $this->widget('application.modules.menu.widgets.MenuWidget', ['name' => 'top-menu']); ?>
+    <?php endif; ?>
 </header>
 <?= $content; ?>
     <!-- footer -->
