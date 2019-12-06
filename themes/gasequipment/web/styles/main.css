@@ -901,7 +901,11 @@ td, th {
   position: relative;
 }
 
-.default-header nav .main-menu {
+.default-header nav {
+  /*background-color: #fff;*/
+}
+
+.default-header nav ul.top-menu {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-flex;
@@ -971,7 +975,8 @@ td, th {
 }
 
 .sticky-header {
-  padding: 15px 0;
+  /*padding: 15px 0;*/
+  height: 100px;
 }
 
 .is-sticky .sticky-header {

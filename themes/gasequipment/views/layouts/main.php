@@ -6,11 +6,11 @@
     \yupe\components\TemplateEvent::fire(ShopThemeEvents::HEAD_START);
 
     Yii::app()->getClientScript()->registerCssFile($this->mainAssets . '/styles/bootstrap.css');
-    Yii::app()->getClientScript()->registerCssFile($this->mainAssets . '/styles/main.css');
     Yii::app()->getClientScript()->registerCssFile($this->mainAssets . '/styles/animate.css');
     Yii::app()->getClientScript()->registerCssFile($this->mainAssets . '/styles/linearicons.css');
     Yii::app()->getClientScript()->registerCssFile($this->mainAssets . '/styles/owl.carousel.css');
     Yii::app()->getClientScript()->registerCssFile('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css');
+    Yii::app()->getClientScript()->registerCssFile($this->mainAssets . '/styles/main.css');
 
     Yii::app()->getClientScript()->registerCoreScript('jquery');
     ?>
@@ -46,9 +46,6 @@
                         <a href="#top" class="smooth"><img src="img/logo.png" alt=""></a>
                     </div>
                     <div class="right-bar d-flex align-items-center">
-                        <?php if (Yii::app()->hasModule('menu')): ?>
-                            <?php $this->widget('application.modules.menu.widgets.MenuWidget', ['name' => 'top-menu']); ?>
-                        <?php endif; ?>
                         <div class="search relative">
                             <span class="lnr lnr-magnifier"></span>
                             <form action="#" class="search-field">
@@ -65,6 +62,11 @@
                 </div>
             </div>
         </div>
+        <nav>
+        <?php if (Yii::app()->hasModule('menu')): ?>
+            <?php $this->widget('application.modules.menu.widgets.MenuWidget', ['name' => 'top-menu']); ?>
+        <?php endif; ?>
+        </nav>
     </header>
 
     <?= $content ?>
