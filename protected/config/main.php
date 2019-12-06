@@ -29,13 +29,13 @@ return [
     // Default controller
     'defaultController' => 'site',
     // Application name
-    'name' => 'Yupe!',
+    'name' => 'Gasequipment',
     // Default language
     'language' => 'ru',
     'sourceLanguage' => 'en',
     // Default theme
-    'theme' => 'default',
-    'layout' => 'yupe',
+    'theme' => 'gasequipment',
+    'layout' => 'main',
     'charset' => 'UTF-8',
     'controllerNamespace' => 'application\controllers',
     'aliases' => [
