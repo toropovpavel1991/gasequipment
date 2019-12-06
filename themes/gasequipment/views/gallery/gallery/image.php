@@ -19,28 +19,35 @@ $this->title = $model->name; ?>
     $model->name
 ];
 ?>
-<h1 class="page-header"><?= CHtml::encode($model->name); ?></h1>
-<div class="thumbnail">
-    <?= CHtml::image($model->getImageUrl(), $model->name); ?>
+<div class="main__title grid">
+    <h1 class="h2"><?= CHtml::encode($model->name); ?></h1>
 </div>
-<hr>
-<p>
-    <?= CHtml::image($model->user->getAvatar(16), $model->user->nick_name); ?> <?= CHtml::link(
-        $model->user->nick_name,
-        ['/user/people/userInfo', 'username' => $model->user->nick_name]
-    ); ?>
-    <i class="fa fa-calendar"></i> <?= Yii::app()->getDateFormatter()->format(
-        'dd MMMM yyyy г., hh:mm',
-        $model->create_time
-    ); ?>
-</p>
+<div class="main__catalog grid">
+    <div class="cols">
+        <div class="col grid-module-9">
+            <?= CHtml::image($model->getImageUrl(), $model->name); ?>
+            <p>
+                <?= CHtml::image($model->user->getAvatar(16), $model->user->nick_name); ?> <?= CHtml::link(
+                    $model->user->nick_name,
+                    ['/user/people/userInfo', 'username' => $model->user->nick_name]
+                ); ?>
+                <i class="fa fa-calendar"></i> <?= Yii::app()->getDateFormatter()->format(
+                    'dd MMMM yyyy г., hh:mm',
+                    $model->create_time
+                ); ?>
+            </p>
 
-<blockquote>
-    <p><?= CHtml::encode($model->description); ?></p>
-</blockquote>
+            <blockquote>
+                <p><?= CHtml::encode($model->description); ?></p>
+            </blockquote>
 
-<?php
-$this->widget('application.modules.comment.widgets.CommentsWidget', [
-    'redirectTo' => Yii::app()->createUrl('/gallery/gallery/view', ['id' => $model->gallery->id]),
-    'model' => $model,
-]);
+            <div class="fast-order__inputs">
+                <?php
+                $this->widget('application.modules.comment.widgets.CommentsWidget', [
+                    'redirectTo' => Yii::app()->createUrl('/gallery/gallery/view', ['id' => $model->gallery->id]),
+                    'model' => $model,
+                ]); ?>
+            </div>
+        </div>
+    </div>
+</div>

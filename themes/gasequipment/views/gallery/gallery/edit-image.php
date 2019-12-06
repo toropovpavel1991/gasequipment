@@ -20,12 +20,11 @@ $this->breadcrumbs = [
         ]
     )
 ]; ?>
-<h1 class="page-header">
-    <?= Yii::t(
-        'GalleryModule.gallery',
-        'Edit message #{id}',
-        ['{id}' => $model->id]
-    ); ?>
-</h1>
-
-<?php $this->renderPartial('_form', ['model' => $model]); ?>
+<div class="main__title grid">
+    <h1 class="h2"><?= Yii::t('GalleryModule.gallery', 'Edit message #{id}', ['{id}' => $model->id]); ?></h1>
+</div>
+<div class="main__catalog grid">
+    <div class="cols">
+        <?php $this->renderPartial('_form', ['model' => $model]); ?>
+    </div>
+</div>

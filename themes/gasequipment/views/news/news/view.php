@@ -24,19 +24,12 @@ $this->breadcrumbs = [
     $model->title
 ];
 ?>
-
-<div class="post">
-    <div class="row">
-        <div class="col-sm-12">
-            <h4><strong><?= CHtml::encode($model->title); ?></strong></h4>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-12">
-            <?php if ($model->image): ?>
-                <?= CHtml::image($model->getImageUrl(), $model->title, ['class' => 'img-responsive']); ?>
-            <?php endif; ?>
-            <p> <?= $model->full_text; ?></p>
-        </div>
-    </div>
+<div class="main__title grid">
+    <h1 class="h2"><?= CHtml::encode($model->title); ?></h1>
+</div>
+<div class="main__catalog grid fast-order__inputs">
+    <?php if ($model->image): ?>
+        <?= CHtml::image($model->getImageUrl(), $model->title); ?>
+    <?php endif; ?>
+    <p> <?= $model->full_text; ?></p>
 </div>

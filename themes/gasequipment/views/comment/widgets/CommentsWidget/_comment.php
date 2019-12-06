@@ -3,47 +3,17 @@
 $level = $comment->getLevel()
 ?>
 
-<div class="comments-item <?= $level > 0 ? 'comments-item-child' : '' ?>"
-     data-level="<?= $level; ?>"
-     data-pid="<?= $comment->parent_id; ?>"
-     data-id="<?= $comment->id; ?>"
-     id="comment-<?= $comment->id; ?>"
-     style="margin-left: <?=(30 * $level); ?>px;">
-
-    <div class="comments-item-main">
-        <div class="comments-item-avatar">
-            <a href="<?= $comment->getAuthorUrl() ?>"><?= $comment->getAuthorAvatar(); ?></a>
-        </div>
-        <div class="comments-item-top">
-            <div class="comments-item-author">
-                <?= $comment->getAuthorLink(); ?>
-                <span class='comments-item-date'>
-                    <time datetime="<?= str_replace(' ', '_', $comment->create_time); ?>">
-                        <?= Yii::app()->getDateFormatter()->formatDateTime(
-                            $comment->create_time,
-                            'long',
-                            'short'
-                        ); ?>
-                    </time>
-                </span>
-            </div>
-        </div>
-        <div class="comments-item-message">
-            <?= nl2br(trim($comment->getText())); ?>
-            <?php if ($this->showForm): ?>
-                <div>
-                <?= CHtml::link(
-                    Yii::t('CommentModule.comment', 'reply'),
-                    '#',
-                    [
-                        'rel' => $comment->id,
-                        'data-id' => $comment->id . '_' . str_replace(' ', '_', $comment->create_time),
-                        'class' => 'reply',
-                        'title' => Yii::t('CommentModule.comment', 'Reply')
-                    ]
-                ); ?>
-                </div>
-            <?php endif; ?>
-        </div>
+<div class="product-review-item">
+    <div class="product-review-user"><span class="product-review-user__name"><?= $comment->getAuthorLink(); ?></span>
+    </div>
+    <div class="product-review-item__stat">
+        <div class="product-review-item__text"><?= trim($comment->getText()); ?></div>
+    </div>
+    <div class="product-review-item__footer">
+        <?= Yii::app()->getDateFormatter()->formatDateTime(
+            $comment->create_time,
+            'long',
+            'short'
+        ); ?>
     </div>
 </div>

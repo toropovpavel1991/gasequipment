@@ -7,7 +7,7 @@
             [
                 '{site}' => CHtml::encode(
                     Yii::app()->getModule('yupe')->siteName
-                ),
+                )
             ]
         ); ?></title>
 </head>
@@ -18,8 +18,8 @@
     'You was successfully registered on "{site}" !',
     [
         '{site}' => CHtml::encode(
-            Yii::app()->getModule('yupe')->siteName
-        ),
+                Yii::app()->getModule('yupe')->siteName
+            )
     ]
 ); ?>
 
@@ -30,8 +30,8 @@
     'Truly yours, administration of "{site}" !',
     [
         '{site}' => CHtml::encode(
-            Yii::app()->getModule('yupe')->siteName
-        ),
+                Yii::app()->getModule('yupe')->siteName
+            )
     ]
 ); ?>
 

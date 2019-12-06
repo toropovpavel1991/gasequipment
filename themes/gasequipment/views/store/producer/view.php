@@ -18,46 +18,64 @@ $this->breadcrumbs = [
 ];
 
 ?>
-<div class="row">
-    <div class="col-xs-12">
-        <h2>
-            <?= Yii::t('StoreModule.store', 'The products of the manufacturer'); ?>
-            &laquo;<?= CHtml::encode($brand->name) ?>&raquo;
-        </h2>
-    </div>
+<div class="main__title grid">
+    <h1 class="h2">
+        <?= Yii::t('StoreModule.store', 'The products of the manufacturer'); ?>
+        &laquo;<?= CHtml::encode($brand->name) ?>&raquo;
+    </h1>
 </div>
 
-<div class="row">
-    <div class="col-xs-4">
-        <img src="<?= $brand->getImageUrl() ?>" alt="">
+<div class="main__recently-viewed-slider grid">
+    <div class="col grid-module-3">
+        <img src="<?= StoreImage::producer($brand, 100, 100);?>" alt="<?= CHtml::encode($brand->name); ?>">
     </div>
-    <div class="col-xs-8">
+    <div class="col grid-module-8">
         <?= $brand->description ?>
     </div>
 </div>
-<div class="row">
-    <div class="col-sm-9 col-sm-offset-2">
-        <section>
-            <div class="grid">
-                <?php $this->widget(
-                    'bootstrap.widgets.TbListView',
-                    [
-                        'dataProvider' => $products,
-                        'itemView' => '//store/product/_item',
-                        'summaryText' => '',
-                        'enableHistory' => true,
-                        'cssFile' => false,
-                        'itemsCssClass' => 'row items',
-                        'sortableAttributes' => [
-                            'sku',
-                            'name',
-                            'price',
-                            'update_time'
-                        ],
+<p>&nbsp;</p>
+<div class="main__catalog grid">
+    <div class="cols">
+        <div class="col grid-module-2"></div>
+        <div class="col grid-module-9">
+            <?php $this->widget(
+                'zii.widgets.CListView', [
+                    'dataProvider' => $products,
+                    'itemView' => '//store/product/_item',
+                    'template' => '
+                        <div class="catalog-controls">
+                            <div class="catalog-controls__col">{sorter}</div>
+                        </div>
+                        {items}
+                        {pager}
+                    ',
+                    'summaryText' => '',
+                    'enableHistory' => true,
+                    'cssFile' => false,
+                    'itemsCssClass' => 'catalog__items',
+                    'sortableAttributes' => [
+                        'sku',
+                        'name',
+                        'price',
+                        'update_time'
+                    ],
+                    'sorterHeader' => '<div class="sorter__description">Сортировать:</div>',
+                    'htmlOptions' => [
+                        'class' => 'catalog'
+                    ],
+                    'pagerCssClass' => 'catalog__pagination',
+                    'pager' => [
+                        'header' => '',
+                        'prevPageLabel' => '<i class="fa fa-long-arrow-left"></i>',
+                        'nextPageLabel' => '<i class="fa fa-long-arrow-right"></i>',
+                        'firstPageLabel' => false,
+                        'lastPageLabel' => false,
+                        'htmlOptions' => [
+                            'class' => 'pagination'
+                        ]
                     ]
-                ); ?>
-            </div>
-        </section>
+                ]
+            ); ?>
+        </div>
     </div>
 </div>
-

@@ -4,11 +4,18 @@
  */
 $brandUrl = Yii::app()->createUrl('/store/producer/view', ['slug' => $data->slug])
 ?>
-<div class="category-item">
-    <a href="<?= $brandUrl; ?>">
-        <img src="<?= $data->getImageUrl(250, 250, false); ?>"/>
-    </a>
-    <div class="text-center">
-        <a href="<?= $brandUrl; ?>" class="category-item-title"><?= CHtml::encode($data->name); ?></a>
+
+<div class="brand__item">
+<div class="product-mini">
+    <div class="product-mini__thumbnail">
+        <a href="<?= $brandUrl ?>">
+            <img src="<?= $data->getImageUrl(120, 120, false); ?>" class="product-mini__img" />
+        </a>
     </div>
+    <div class="product-mini__info">
+        <div class="product-mini__title">
+            <a href="<?= $brandUrl ?>" class="product-mini__link"><?= CHtml::encode($data->name); ?></a>
+        </div>
+    </div>
+</div>
 </div>

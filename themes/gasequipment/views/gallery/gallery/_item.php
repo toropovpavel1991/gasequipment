@@ -11,38 +11,40 @@
  * @var $this GalleryController
  * @var $data Gallery
  **/
+
+$url = Yii::app()->createUrl('/gallery/gallery/view', ['id' => $data->id]);
 ?>
-<div class="media">
-    <?= CHtml::link(
-        CHtml::image($data->previewImage(300, 300), $data->name, ['class' => 'thumbnail media-object']),
-        ['/gallery/gallery/view', 'id' => $data->id],
-        ['class' => 'pull-left']
-    ); ?>
+<div class="catalog__item">
+    <article class="product-vertical">
+        <a href="<?= $url ?>">
+            <div class="product-vertical__thumbnail">
+                <?= CHtml::image($data->previewImage(300, 300), $data->name, ['class' => 'thumbnail media-object']) ?>
+            </div>
+        </a>
 
-    <div class="media-body">
+        <div class="product-vertical__extra">
 
-        <h3 class="media-heading">
-            <?= CHtml::link(CHtml::encode($data->name), ['/gallery/gallery/view', 'id' => $data->id]); ?>
-        </h3>
+            <h3 class="media-heading">
+                <?= CHtml::link(CHtml::encode($data->name), $url); ?>
+            </h3>
 
-        <?= $data->description; ?>
+            <?= $data->description; ?>
 
-        <div class="well well-sm">
-            <?php if ($data->imagesCount): ?>
-                <ul class="list-inline">
-                    <li>
-                        <?= Yii::t('GalleryModule.gallery', 'Messages summary:'); ?> <span
-                            class="badge alert-info"><?= $data->imagesCount; ?></span>
-                    </li>
-                    <li>
-                        <i class="glyphicon glyphicon-calendar"></i> <?= Yii::app()->dateFormatter->format(
-                            'dd MMMM yyyy г., hh:mm',
-                            $data->lastUpdated
-                        ); ?>
-                    </li>
-                </ul>
-            <?php endif; ?>
+            <div class="well well-sm">
+                <?php if ($data->imagesCount): ?>
+                    <ul class="list-inline">
+                        <li>
+                            <?= Yii::t('GalleryModule.gallery', 'Messages summary:'); ?>
+                            <b><?= $data->imagesCount; ?></b>
+                        </li>
+                        <li>
+                            <i class="glyphicon glyphicon-calendar"></i>
+                            <?= Yii::app()->dateFormatter->format('dd MMMM yyyy г., hh:mm', $data->lastUpdated); ?>
+                        </li>
+                    </ul>
+                <?php endif; ?>
+            </div>
+
         </div>
-
-    </div>
+    </article>
 </div>

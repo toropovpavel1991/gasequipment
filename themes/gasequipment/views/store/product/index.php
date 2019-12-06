@@ -1,73 +1,72 @@
 <?php
-
 $mainAssets = Yii::app()->getTheme()->getAssetsUrl();
-Yii::app()->getClientScript()->registerCssFile($mainAssets . '/css/store-frontend.css');
 Yii::app()->getClientScript()->registerScriptFile($mainAssets . '/js/store.js');
 
 /* @var $category StoreCategory */
-
 $this->title = Yii::app()->getModule('store')->metaTitle ?: Yii::t('StoreModule.store', 'Catalog');
 $this->description = Yii::app()->getModule('store')->metaDescription;
 $this->keywords = Yii::app()->getModule('store')->metaKeyWords;
 
 $this->breadcrumbs = [Yii::t("StoreModule.store", "Catalog")];
+
 ?>
-
-<div class="row">
-    <div class="col-xs-12">
-        <h2><?= Yii::t("StoreModule.store", "Product catalog"); ?></h2>
-    </div>
+<div class="main__title grid">
+    <h1 class="h2"><?= Yii::t("StoreModule.store", "Product catalog"); ?></h1>
 </div>
 
-<div class="row">
-    <?php $this->widget('application.modules.store.widgets.SearchProductWidget'); ?>
-</div>
-<div class="row">
-    <div class="col-sm-3">
-        <form id="store-filter" name="store-filter" method="get">
-            <div>
-                <?php $this->widget('application.modules.store.widgets.filters.PriceFilterWidget'); ?>
+<div class="main__catalog grid">
+    <div class="cols">
+        <div class="col grid-module-3">
+            <div class="catalog-filter">
+                <form id="store-filter" name="store-filter" method="get">
+                    <?php $this->widget('application.modules.store.widgets.filters.QFilterWidget'); ?>
+                    <?php $this->widget('application.modules.store.widgets.filters.PriceFilterWidget'); ?>
+                    <?php $this->widget('application.modules.store.widgets.filters.CategoryFilterWidget', ['limit' => 30]); ?>
+                    <?php $this->widget('application.modules.store.widgets.filters.ProducerFilterWidget', ['limit' => 30]); ?>
+                    <?php $this->widget('application.modules.store.widgets.filters.FilterBlockWidget', ['attributes' => '*']); ?>
+                </form>
             </div>
-            <div>
-                <?php $this->widget('application.modules.store.widgets.filters.SizeFilterWidget'); ?>
-            </div>
-            <div>
-                <?php $this->widget('application.modules.store.widgets.filters.CategoryFilterWidget'); ?>
-            </div>
-            <div>
-                <?php $this->widget('application.modules.store.widgets.filters.ProducerFilterWidget', ['limit' => 30]); ?>
-            </div>
-            <div>
-                <?php $this->widget('application.modules.store.widgets.filters.FilterBlockWidget', ['attributes' => '*']); ?>
-            </div>
-        </form>
-        <?php if($this->beginCache('store::category::count')):?>
-            <?php $this->widget('application.modules.store.widgets.CategoryWidget', ['view' => 'category-with-count']); ?>
-            <?php $this->endCache(); ?>
-        <?php endif;?>
-    </div>
-    <div class="col-sm-9">
-        <section>
-            <div class="grid">
-                <?php $this->widget(
-                    'bootstrap.widgets.TbListView',
-                    [
-                        'dataProvider' => $dataProvider,
-                        'itemView' => '_item',
-                        'summaryText' => '',
-                        'enableHistory' => true,
-                        'cssFile' => false,
-                        'itemsCssClass' => 'row items',
-                        'sortableAttributes' => [
-                            'sku',
-                            'name',
-                            'price',
-                            'update_time'
-                        ],
+        </div>
+        <div class="col grid-module-9">
+            <?php $this->widget(
+                'zii.widgets.CListView', [
+                    'dataProvider' => $dataProvider,
+                    'itemView' => '_item',
+                    'template' => '
+                        <div class="catalog-controls">
+                            <div class="catalog-controls__col">{sorter}</div>
+                        </div>
+                        {items}
+                        {pager}
+                    ',
+                    'summaryText' => '',
+                    'enableHistory' => true,
+                    'cssFile' => false,
+                    'itemsCssClass' => 'catalog__items',
+                    'sortableAttributes' => [
+                        'sku',
+                        'name',
+                        'price',
+                        'update_time'
+                    ],
+                    'sorterHeader' => '<div class="sorter__description">Сортировать:</div>',
+                    'htmlOptions' => [
+                        'class' => 'catalog'
+                    ],
+                    'pagerCssClass' => 'catalog__pagination',
+                    'pager' => [
+                        'header' => '',
+                        'prevPageLabel' => '<i class="fa fa-long-arrow-left"></i>',
+                        'nextPageLabel' => '<i class="fa fa-long-arrow-right"></i>',
+                        'firstPageLabel' => false,
+                        'lastPageLabel' => false,
+                        'htmlOptions' => [
+                            'class' => 'pagination'
+                        ]
                     ]
-                ); ?>
-            </div>
-        </section>
+                ]
+            ); ?>
+        </div>
     </div>
 </div>
 

@@ -8,43 +8,42 @@
  * @license  https://github.com/yupe/yupe/blob/master/LICENSE BSD
  * @link     https://yupe.ru
  **/
-$url = Yii::app()->getTheme()->getAssetsUrl();
-
-Yii::app()->getClientScript()->registerScriptFile($url . '/js/masonry.min.js', CClientScript::POS_END);
-Yii::app()->getClientScript()->registerScriptFile($url . '/js/imagesloaded.min.js', CClientScript::POS_END);
-
-Yii::app()->clientScript->registerScript(
-    $this->getId(),
-    'var $container = jQuery(".gallery-thumbnails");
-    $container.imagesLoaded(function () {
-        $container.masonry({
-            itemSelector: ".gallery-thumbnail",
-            gutter: 10
-        });
-    });'
-);
 
 $this->widget(
     'gallery.extensions.colorbox.ColorBox',
     [
         'target' => '.gallery-image',
-        'lang'   => 'ru',
+        'lang' => 'ru',
         'config' => [
             'rel' => '.gallery-image',
-            'maxWidth' => '100%',
-            'maxHeight' => '100%',
         ],
     ]
 ); ?>
 
 <?php $this->widget(
-    'bootstrap.widgets.TbListView',
+    'zii.widgets.CListView',
     [
-        'dataProvider'  => $dataProvider,
-        'itemView'      => '_image',
-        'template'      => "{items}\n{pager}",
-        'itemsCssClass' => 'row gallery-thumbnails thumbnails',
-        'itemsTagName'  => 'ul',
-        'afterAjaxUpdate' => '$.fn.colorbox.init()'
+        'dataProvider' => $dataProvider,
+        'itemView' => '_image',
+        'template' => "{items}\n{pager}",
+        'summaryText' => '',
+        'enableHistory' => true,
+        'cssFile' => false,
+        'itemsCssClass' => 'catalog__items gallery-thumbnails',
+        'htmlOptions' => [
+            'class' => 'catalog'
+        ],
+        'pagerCssClass' => 'catalog__pagination',
+        'pager' => [
+            'header' => '',
+            'prevPageLabel' => '<i class="fa fa-long-arrow-left"></i>',
+            'nextPageLabel' => '<i class="fa fa-long-arrow-right"></i>',
+            'firstPageLabel' => false,
+            'lastPageLabel' => false,
+            'htmlOptions' => [
+                'class' => 'pagination'
+            ]
+        ],
+        'afterAjaxUpdate' => 'function(){$(".gallery-image").colorbox()}'
     ]
 ); ?>

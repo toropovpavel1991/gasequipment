@@ -2,27 +2,25 @@
 /**
  * @var array $brands
  * @var Producer $brand
+ * @var $title string
  */
 ?>
 <?php if ($brands): ?>
-    <div class="row">
-        <div class="col-sm-12">
-            <div id="brand-carousel" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner" role="listbox">
-                    <?php foreach ($brands as $i => $brand): ?>
-                        <div class="item <?= $i == 0 ? 'active' : '' ?>">
-                            <div class="scrollElement__item" data-target="#carousel">
-                                <?php $this->render('_item', ['brand' => $brand]) ?>
-                            </div>
+    <div class="main__best-brands grid">
+        <div class="best-brands">
+            <div class="best-brands__title">
+                <div class="h3 h_upcase"><?= $title ?></div>
+            </div>
+            <div class="best-brands__body">
+                <div class="grid">
+                    <?php foreach ($brands as $brand): ?>
+                        <div class="best-brands__item grid-module-2">
+                            <a href="<?= Yii::app()->createUrl('/store/producer/view', ['slug' => $brand->slug]) ?>" title="<?= $brand->name ?>">
+                                <img src="<?= StoreImage::producer($brand, 100, 100) ?>" class="best-brands__img" alt="<?= $brand->name ?>">
+                            </a>
                         </div>
                     <?php endforeach; ?>
                 </div>
-                <a class="left carousel-control" href="#brand-carousel" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                </a>
-                <a class="right carousel-control" href="#brand-carousel" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                </a>
             </div>
         </div>
     </div>

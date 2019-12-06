@@ -5,24 +5,15 @@
  * @var Product $product
  */
 ?>
-<div class="row">
-    <div class="col-sm-12">
-        <div id="carousel" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner" role="listbox">
-                <?php foreach ($products as $i => $product): ?>
-                    <div class="item <?= $i == 0 ? 'active' : '' ?>">
-                        <div class="scrollElement__item" data-target="#carousel">
-                            <?php $this->render('_item', ['product' => $product]) ?>
-                        </div>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-            <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            </a>
-            <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            </a>
-        </div>
+
+<div data-show='4' data-scroll='1' data-infinite="data-infinite" class="h-slider js-slick">
+    <div class="h-slider__buttons h-slider__buttons_noclip">
+        <div class="btn h-slider__control h-slider__next js-slick__next"></div>
+        <div class="btn h-slider__control h-slider__prev js-slick__prev"></div>
+    </div>
+    <div class="h-slider__slides js-slick__container">
+        <?php foreach ($products->getData() as $product): ?>
+            <?php $this->render('_item', ['product' => $product]) ?>
+        <?php endforeach; ?>
     </div>
 </div>

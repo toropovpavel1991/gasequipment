@@ -1,14 +1,11 @@
 <?php $filter = Yii::app()->getComponent('attributesFilter');?>
-<div class="filter-block-checkbox-list">
-    <div class="filter-block-header">
-        <strong><?= $attribute->title ?></strong>
-    </div>
-    <div class="filter-block-body">
-        <div class="row">
-            <div class="col-xs-12">
-                <?= CHtml::textField($filter->getFieldName($attribute), $filter->getFieldValue($attribute), ['class' => 'form-control']) ?>
-            </div>
+<div class="filter-block">
+    <div class="filter-block__title">
+        <?= $attribute->title ?>
+        <div class="filter-block__range">
+            <span class="filter-input__box">
+            <?= CHtml::textField($filter->getFieldName($attribute), $filter->getFieldValue($attribute), ['class' => 'filter-input__control']) ?>
+                </span>
         </div>
     </div>
 </div>
-<hr/>

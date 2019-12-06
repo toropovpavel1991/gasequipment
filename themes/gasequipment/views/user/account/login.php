@@ -1,60 +1,53 @@
 <?php
+/**
+ * @var CActiveForm $form
+ */
 $this->title = Yii::t('UserModule.user', 'Sign in');
 $this->breadcrumbs = [Yii::t('UserModule.user', 'Sign in')];
 ?>
 
-<?php $this->widget('yupe\widgets\YFlashMessages'); ?>
+<div class="main__title grid">
+    <h1 class="h2"><?= Yii::t('UserModule.user', 'Sign in') ?></h1>
+</div>
+<div class="main__cart-box grid">
+    <div class="grid-module-6">
+        <?php $this->widget('yupe\widgets\YFlashMessages'); ?>
 
-<?php $form = $this->beginWidget(
-    'bootstrap.widgets.TbActiveForm',
-    [
-        'id' => 'login-form',
-        'type' => 'vertical',
-        'htmlOptions' => [
-            'class' => 'well',
-        ]
-    ]
-); ?>
+        <?php $form = $this->beginWidget('CActiveForm', [
+            'id' => 'login-form',
+            'enableClientValidation' => true
+        ]); ?>
 
-<?= $form->errorSummary($model); ?>
-<div class="row">
-    <div class="col-sm-6 col-sm-offset-3">
-        <div class='row'>
-            <div class="col-xs-12">
-                <?= $form->textFieldGroup($model, 'email'); ?>
-            </div>
+        <?= $form->errorSummary($model); ?>
+
+        <div class="fast-order__inputs">
+            <?= $form->labelEx($model, 'email'); ?>
+            <?= $form->textField($model, 'email', ['class' => 'input input_big']); ?>
+            <?= $form->error($model, 'email') ?>
         </div>
 
-        <div class='row'>
-            <div class="col-xs-12">
-                <?= $form->passwordFieldGroup($model, 'password'); ?>
-            </div>
+        <div class="fast-order__inputs">
+            <?= $form->labelEx($model, 'password'); ?>
+            <?= $form->passwordField($model, 'password', ['class' => 'input input_big']); ?>
+            <?= $form->error($model, 'password') ?>
         </div>
 
         <?php if ($this->getModule()->sessionLifeTime > 0): { ?>
-            <div class='row'>
-                <div class="col-xs-12">
-                    <?= $form->checkBoxGroup($model, 'remember_me', [
-                        'widgetOptions' => [
-                            'htmlOptions' => [
-                                'checked' => true
-                            ]
-                        ]
-                    ]); ?>
-                </div>
+            <div class="fast-order__inputs">
+                <?= $form->checkBox($model, 'remember_me', ['checked' => true]); ?>
+                <?= $form->labelEx($model, 'remember_me'); ?>
             </div>
         <?php } endif; ?>
 
         <?php if (Yii::app()->getUser()->getState('badLoginCount', 0) >= 3 && CCaptcha::checkRequirements('gd')): { ?>
-            <div class="row">
-                <div class="col-xs-4">
-                    <?= $form->textFieldGroup(
-                        $model,
-                        'verifyCode',
-                        ['hint' => Yii::t('UserModule.user', 'Please enter the text from the image')]
-                    ); ?>
+            <div class="fast-order__inputs">
+                <div class="column grid-module-3">
+                    <?= $form->textField($model, 'verifyCode', [
+                        'class' => 'input input_big',
+                        'placeholder' => Yii::t('UserModule.user', 'Please enter the text from the image')
+                    ]); ?>
                 </div>
-                <div class="col-xs-4">
+                <div class="column grid-module-3 pull-right">
                     <?php $this->widget(
                         'CCaptcha',
                         [
@@ -63,9 +56,9 @@ $this->breadcrumbs = [Yii::t('UserModule.user', 'Sign in')];
                                 'width' => '150',
                             ],
                             'buttonOptions' => [
-                                'class' => 'btn btn-default',
+                                'class' => 'btn btn_big btn_white pull-right',
                             ],
-                            'buttonLabel' => '<i class="glyphicon glyphicon-repeat"></i>',
+                            'buttonLabel' => '<i class="fa fa-fw fa-repeat"></i>',
                         ]
                     ); ?>
                 </div>
@@ -73,55 +66,39 @@ $this->breadcrumbs = [Yii::t('UserModule.user', 'Sign in')];
         <?php } endif; ?>
 
 
-        <div class="row">
-            <div class="col-xs-12">
-                <?php
-                $this->widget(
-                    'bootstrap.widgets.TbButton',
-                    [
-                        'buttonType' => 'submit',
-                        'context' => 'primary',
-                        'icon' => 'glyphicon glyphicon-signin',
-                        'label' => Yii::t('UserModule.user', 'Sign in'),
-                        'htmlOptions' => ['id' => 'login-btn', 'name' => 'login-btn']
-                    ]
-                ); ?>
-
-                <?php
-                $this->widget(
-                    'bootstrap.widgets.TbButton',
-                    [
-                        'buttonType' => 'link',
-                        'context' => 'link',
-                        'label' => Yii::t('UserModule.user', 'Sign up'),
-                        'url' => Yii::app()->createUrl('/user/account/registration'),
-                    ]
-                ); ?>
+        <div class="fast-order__inputs">
+            <div class="column grid-module-3">
+                <?= CHtml::submitButton(Yii::t('UserModule.user', 'Sign in'), [
+                    'id' => 'login-btn',
+                    'class' => 'btn btn_big btn_wide btn_white'
+                ]) ?>
+            </div>
+            <div class="column grid-module-3 pull-right">
+                <?= CHtml::link(Yii::t('UserModule.user', 'Sign up'), Yii::app()->createUrl('/user/account/registration'), [
+                    'class' => 'btn btn_big btn_wide btn_white'
+                ]) ?>
+            </div>
+        </div>
+        <div class="fast-order__inputs">
+            <div class="grid-module-3">
+                <?= CHtml::link(Yii::t('UserModule.user', 'Forgot your password?'), ['/user/account/recovery'], ['class' => 'dropdown-menu__link']) ?>
             </div>
         </div>
 
         <?php if (Yii::app()->hasModule('social')): { ?>
-            <hr/>
-            <div class="row">
-                <div class="col-xs-12">
-                    <?php
-                    $this->widget(
-                        'vendor.krupni.yii-eauth.EAuthWidget',
-                        [
-                            'action' => '/social/login',
-                            'predefinedServices' => ['google', 'facebook', 'vkontakte', 'twitter', 'github', 'odnoklassniki'],
-                        ]
-                    );
-                    ?>
-                </div>
+            <div class="fast-order__inputs">
+                <?php
+                $this->widget(
+                    'vendor.krupni.yii-eauth.EAuthWidget',
+                    [
+                        'action' => '/social/login',
+                        'predefinedServices' => ['google', 'facebook', 'vkontakte', 'twitter', 'github'],
+                    ]
+                );
+                ?>
             </div>
         <?php } endif; ?>
-        <div class="row">
-            <div class="col-xs-12">
-                <?= CHtml::link(Yii::t('UserModule.user', 'Forgot your password?'), ['/user/account/recovery']) ?>
-            </div>
-        </div>
+
+        <?php $this->endWidget(); ?>
     </div>
 </div>
-
-<?php $this->endWidget(); ?>

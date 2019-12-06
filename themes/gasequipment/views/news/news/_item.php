@@ -1,8 +1,11 @@
 <?php
 /* @var $data News */
+$url = Yii::app()->createUrl('/news/news/view', ['slug' => $data->slug]);
 ?>
-<h4><?= CHtml::link(CHtml::encode($data->title), Yii::app()->createUrl('/news/news/view', ['slug' => $data->slug])); ?></h4>
-<p> <?= $data->short_text; ?></p>
-
-<p class="text-right"><?= CHtml::link(Yii::t('NewsModule.news', 'read...'), ['/news/news/view/', 'slug' => $data->slug], ['class' => 'btn btn-default']); ?></p>
-<hr/>
+<div class="fast-order__inputs">
+    <h4 class="h3"><?= CHtml::link(CHtml::encode($data->title), $url, ['class' => 'cart-item__link']); ?></h4>
+    <p> <?= $data->short_text; ?></p>
+    <p class="pull-right">
+        <?= CHtml::link(Yii::t('NewsModule.news', 'read...'), $url, ['class' => 'btn btn_primary']); ?>
+    </p>
+</div>

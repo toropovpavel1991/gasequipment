@@ -1,17 +1,13 @@
 <?php $filter = Yii::app()->getComponent('attributesFilter'); ?>
-<div class="filter-block-checkbox-list">
-    <div class="filter-block-header">
-        <strong><?= $attribute->title ?></strong>
-    </div>
-    <div class="filter-block-body">
-        <div class="checkbox">
+<div class="filter-block">
+    <div class="filter-block__title">
+        <div class="filter-block__list-item">
             <?= CHtml::checkBox(
                 $filter->getFieldName($attribute),
                 $filter->isFieldChecked($attribute, 1),
-                ['value' => 1]
+                ['value' => 1, 'class' => 'checkbox']
             ) ?>
-            <?= CHtml::label('да/нет', $filter->getFieldName($attribute)); ?>
+            <?= CHtml::label($attribute->title, $filter->getFieldName($attribute), ['class' => 'checkbox__label']); ?>
         </div>
     </div>
 </div>
-<hr/>

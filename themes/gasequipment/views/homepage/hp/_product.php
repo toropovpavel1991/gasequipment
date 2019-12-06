@@ -2,32 +2,60 @@
 /**
  * @var Product $data
  */
+$basePrice = (float)$data->getBasePrice();
+$price = $data->getResultPrice();
 ?>
-
-<div class="col-sm-4">
-    <div class="col-item">
-        <div class="photo">
-            <a href="<?= ProductHelper::getUrl($data); ?>">
-                <img src="<?= StoreImage::product($data, 190, 190, false); ?>"/>
-            </a>
-        </div>
-        <div class="info separator">
-            <div class="row">
-                <div class="price col-sm-12">
-                    <h5>
-                        <a href="<?= ProductHelper::getUrl($data); ?>"><?= CHtml::encode($data->getName()); ?></a>
-                    </h5>
-                    <h5 class="price-text-color">
-                        <?= $data->getResultPrice(); ?> <?= Yii::t("StoreModule.store", Yii::app()->getModule('store')->currency); ?>
-                    </h5>
-                </div>
+<div class="catalog__item">
+    <article class="product-vertical">
+        <a href="<?= ProductHelper::getUrl($data); ?>">
+            <div class="product-vertical__thumbnail">
+                <img src="<?= $data->getImageUrl(150, 280, false); ?>" class="product-vertical__img" />
             </div>
-            <div class="separator clear-left">
-                <?php if (Yii::app()->hasModule('cart')): ?>
-                    <a href="#" class="btn btn-add btn-success btn-block hidden-sm quick-add-product-to-cart" data-product-id="<?= $data->id; ?>" data-cart-add-url="<?= Yii::app()->createUrl('/cart/cart/add');?>"><i class="glyphicon glyphicon-shopping-cart"></i></a>
+        </a>
+        <div class="product-vertical__content"><a href="<?= ProductHelper::getUrl($data); ?>" class="product-vertical__title"><?= CHtml::encode($data->getName()); ?></a>
+            <div class="product-vertical__price">
+                <div class="product-price"><?= $price ?><span class="ruble"> <?= Yii::t("StoreModule.store", Yii::app()->getModule('store')->currency); ?></span></div>
+                <?php if ($basePrice != $price): ?>
+                    <div class="product-price product-price_old"><?= $basePrice ?><span class="ruble"> <?= Yii::t("StoreModule.store", Yii::app()->getModule('store')->currency); ?></span></div>
                 <?php endif; ?>
             </div>
-            <div class="clearfix"></div>
         </div>
-    </div>
+        <div class="product-vertical__extra">
+            <div class="product-vertical-extra">
+                <div class="product-vertical-extra__top">
+                    <?php if(Yii::app()->hasModule('reviews')):?>
+                    <div class="product-vertical-extra__rating">
+                        <div data-rate='5' class="rating">
+                            <div class="rating__label">4.5</div>
+                            <div class="rating__corner">
+                                <div class="rating__triangle"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-vertical-extra__reviews"><a href="javascript:void(0);" class="reviews-link">6 отзывов</a></div>
+                    <?php endif;?>
+                    <?php if($data->isInStock()):?>
+                        <div class="product-vertical-extra__stock">
+                            <div class="in-stock"><?= Yii::t("StoreModule.store", "In stock");?></div>
+                        </div>
+                    <?php endif; ?>
+                </div>
+                <div class="product-vertical-extra__toolbar">
+                    <?php if(Yii::app()->hasModule('favorite')):?>
+                        <?php $this->widget('application.modules.favorite.widgets.FavoriteControl', ['product' => $data]);?>
+                    <?php endif;?>
+                    <?php if(Yii::app()->hasModule('compare')):?>
+                        <div class="product-vertical-extra__button"><i class="fa fa-balance-scale"></i></div>
+                    <?php endif;?>
+                    <div class="product-vertical-extra__cart">
+                        <?php if (Yii::app()->hasModule('cart')): ?>
+                            <a href="javascript:void(0);" class="btn btn_cart quick-add-product-to-cart" data-product-id="<?= $data->id; ?>" data-cart-add-url="<?= Yii::app()->createUrl('/cart/cart/add');?>">
+                                <?= Yii::t('StoreModule.store', 'Into cart') ?>
+                            </a>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
 </div>

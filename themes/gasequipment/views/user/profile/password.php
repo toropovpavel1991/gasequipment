@@ -1,5 +1,8 @@
 <?php
-/* @var $model ProfileForm */
+/**
+ * @var $model ProfileForm
+ * @var $form CActiveForm
+ */
 
 $this->title = Yii::t('UserModule.user', 'Change password');
 $this->breadcrumbs = [
@@ -16,59 +19,47 @@ Yii::app()->clientScript->registerScript(
     });
 });"
 );
-
-$form = $this->beginWidget(
-    'bootstrap.widgets.TbActiveForm',
-    [
-        'id'                     => 'profile-password-form',
-        'enableAjaxValidation'   => false,
-        'enableClientValidation' => true,
-        'htmlOptions'            => [
-            'class' => 'well',
-        ]
-    ]
-);
 ?>
+<div class="main__title grid">
+    <h1 class="h2"><?= Yii::t('UserModule.user', 'Change password') ?></h1>
+</div>
+<div class="main__cart-box grid">
+    <div class="grid-module-6">
 
-<?= $form->errorSummary($model); ?>
+        <?php
+        $form = $this->beginWidget('CActiveForm', [
+            'id' => 'profile-password-form',
+            'enableAjaxValidation' => false,
+            'enableClientValidation' => true,
+        ]); ?>
 
-<div class="row">
-    <div class="col-xs-6">
-        <?= $form->passwordFieldGroup(
-            $model,
-            'password',
-            ['widgetOptions' => ['htmlOptions' => ['autocomplete' => 'off']]]
-        ); ?>
+        <?= $form->errorSummary($model); ?>
+
+        <div class="fast-order__inputs">
+            <?= $form->labelEx($model, 'password'); ?>
+            <?= $form->passwordField($model, 'password', ['class' => 'input input_big', 'autocomplete' => 'off']); ?>
+            <?= $form->error($model, 'password') ?>
+        </div>
+
+        <div class="fast-order__inputs">
+            <?= $form->labelEx($model, 'cPassword'); ?>
+            <?= $form->passwordField($model, 'cPassword', [
+                'class' => 'input input_big',
+                'autocomplete' => 'off'
+            ]); ?>
+            <?= $form->error($model, 'cPassword') ?>
+        </div>
+        <div class="fast-order__inputs">
+            <label class="checkbox">
+                <input type="checkbox" value="1" id="show_pass"> <?= Yii::t('UserModule.user', 'show password') ?>
+            </label>
+        </div>
+        <div class="fast-order__inputs">
+            <?= CHtml::submitButton(Yii::t('UserModule.user', 'Change password'), [
+                'id' => 'login-btn',
+                'class' => 'btn btn_big btn_wide btn_white'
+            ]) ?>
+        </div>
+        <?php $this->endWidget(); ?>
     </div>
 </div>
-
-<div class="row">
-    <div class="col-xs-6">
-        <?= $form->passwordFieldGroup(
-            $model,
-            'cPassword',
-            ['widgetOptions' => ['htmlOptions' => ['autocomplete' => 'off']]]
-        ); ?>
-
-    </div>
-    <div class="col-xs-6">
-        <br/>
-        <label class="checkbox">
-            <input type="checkbox" value="1" id="show_pass"> <?= Yii::t('UserModule.user', 'show password') ?>
-        </label>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-xs-12">
-        <?php $this->widget(
-            'bootstrap.widgets.TbButton',
-            [
-                'buttonType' => 'submit',
-                'context'    => 'primary',
-                'label'      => Yii::t('UserModule.user', 'Change password'),
-            ]
-        ); ?>
-    </div>
-</div>
-<?php $this->endWidget(); ?>

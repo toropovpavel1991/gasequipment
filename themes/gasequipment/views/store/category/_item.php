@@ -1,12 +1,10 @@
-<div class="category-item">
+<div class="catalog__category-item">
     <?php if ($data['icon']): ?>
-        <div class="category-image text-center">
-            <a href="<?= $data['url']; ?>">
-                <img src="<?= $data['icon']; ?>" alt="<?= $data['icon_alt']; ?>" title="<?= $data['icon_title']; ?>"/>
-            </a>
-        </div>
+        <a href="<?= $data['url']; ?>">
+            <img src="<?= $data['icon']; ?>" alt="<?= $data['icon_alt']; ?>" title="<?= $data['icon_title']; ?>"/>
+        </a>
     <?php endif; ?>
-    <a href="<?= $data['url']; ?>" class="category-item-title"><?= CHtml::encode($data['label']); ?></a>
+    <a href="<?= $data['url']; ?>" class="catalog__category-item-title"><?= CHtml::encode($data['label']); ?></a>
     <?php if ($data['items']): ?>
         <ul>
             <?php foreach ($data['items'] as $item): ?>

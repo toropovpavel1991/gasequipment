@@ -11,7 +11,9 @@ $this->breadcrumbs = $this->getBreadCrumbs();
 $this->description = $model->meta_description ?: Yii::app()->getModule('yupe')->siteDescription;
 $this->keywords = $model->meta_keywords ?: Yii::app()->getModule('yupe')->siteKeyWords;
 ?>
-
-<h1><?= $model->title; ?></h1>
-
-<?= $model->body; ?>
+<div class="main__title grid">
+    <h1 class="h2"><?= $model->title; ?></h1>
+</div>
+<div class="main__catalog grid content">
+    <?= $this->decodeWidgets($model->body); ?>
+</div>

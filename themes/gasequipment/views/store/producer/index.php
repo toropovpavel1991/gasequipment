@@ -2,31 +2,39 @@
 /**
  * @var CActiveDataProvider $brands
  */
-$mainAssets = Yii::app()->getTheme()->getAssetsUrl();
-Yii::app()->getClientScript()->registerCssFile($mainAssets . '/css/store-frontend.css');
-
 $this->title = Yii::t('StoreModule.store', 'Producers list');
 $this->breadcrumbs = [
     Yii::t("StoreModule.store", 'Catalog') => ['/store/product/index'],
     Yii::t('StoreModule.store', 'Producers list')
 ];
+
 ?>
-<div class="row">
-    <div class="col-xs-12">
-        <h2><?= Yii::t('StoreModule.store', 'Producers list'); ?></h2>
-    </div>
+<div class="main__title grid">
+    <h1 class="h2">
+        <?= Yii::t('StoreModule.store', 'Producers list'); ?>
+    </h1>
 </div>
 
-<div class="row">
-    <div class="col-sm-12">
-        <?php $this->widget(
-            'bootstrap.widgets.TbListView',
-            [
+<div class="main__catalog grid">
+    <div class="cols">
+        <div class="col grid-module-12">
+            <?php $this->widget('zii.widgets.CListView', [
                 'dataProvider' => $brands,
                 'itemView' => '_item',
-                'summaryText' => '',
-                'cssFile' => false,
-            ]
-        ); ?>
+                'template' => '{items} {pager}',
+                'itemsCssClass' => 'catalog__items',
+                'pagerCssClass' => 'catalog__pagination',
+                'pager' => [
+                    'header' => '',
+                    'prevPageLabel' => '<i class="fa fa-long-arrow-left"></i>',
+                    'nextPageLabel' => '<i class="fa fa-long-arrow-right"></i>',
+                    'firstPageLabel' => false,
+                    'lastPageLabel' => false,
+                    'htmlOptions' => [
+                        'class' => 'pagination'
+                    ]
+                ]
+            ]); ?>
+        </div>
     </div>
 </div>

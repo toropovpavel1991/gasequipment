@@ -10,21 +10,23 @@ $this->breadcrumbs = [
     $model->name
 ];
 ?>
-<div class="gallery-show">
-
-    <h1 class="page-header"><?= CHtml::encode($model->name); ?></h1>
-
+<div class="main__title grid">
+    <h1 class="h2"><?= CHtml::encode($model->name); ?></h1>
     <?= $model->description; ?>
+</div>
+<div class="main__catalog grid">
+    <div class="cols">
+        <div class="col grid-module-9">
+            <?php $this->widget(
+                'gallery.widgets.GalleryWidget',
+                ['galleryId' => $model->id, 'gallery' => $model, 'limit' => 30]
+            ); ?>
 
-    <?php $this->widget(
-        'gallery.widgets.GalleryWidget',
-        ['galleryId' => $model->id, 'gallery' => $model, 'limit' => 30]
-    ); ?>
-
-    <?php if (Yii::app()->getUser()->isAuthenticated()) : ?>
-        <?php if ($model->canAddPhoto) : ?>
-            <?php $this->renderPartial('_form', ['model' => $image, 'gallery' => $model]); ?>
-        <?php endif ?>
-    <?php endif; ?>
-
+            <?php if (Yii::app()->getUser()->isAuthenticated()) : ?>
+                <?php if ($model->canAddPhoto) : ?>
+                    <?php $this->renderPartial('_form', ['model' => $image, 'gallery' => $model]); ?>
+                <?php endif ?>
+            <?php endif; ?>
+        </div>
+    </div>
 </div>
