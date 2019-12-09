@@ -1,4 +1,5 @@
 <?php $this->title = Yii::app()->getModule('yupe')->siteName; ?>
+<?/*
 <!-- Start Banner Area -->
         <section class="banner-area relative">
             <div class="overlay overlay-bg"></div>
@@ -29,7 +30,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <figure class="signle-service">
-                            <img src="img/s1.jpg" class="img-fluid" alt="">
+                            <img src="/images/s1.jpg" class="img-fluid" alt="">
                             <figcaption class="text-center">
                                 <h5 class="text-uppercase">Addiction Whit Gambling</h5>
                                 <p>It is a good idea to think of your PC as an office. It stores files, programs, pictures. This can be compared to an actual office’s files</p>
@@ -39,7 +40,7 @@
                     </div>
                     <div class="col-md-4">
                         <figure class="signle-service">
-                            <img src="img/s2.jpg" class="img-fluid" alt="">
+                            <img src="/images/s2.jpg" class="img-fluid" alt="">
                             <figcaption class="text-center">
                                 <h5 class="text-uppercase">Headset No Longer Wired</h5>
                                 <p>If you are in the market for a computer, there are a number of factors to consider. Will it be used for your home, your office or perhaps </p>
@@ -49,7 +50,7 @@
                     </div>
                     <div class="col-md-4">
                         <figure class="signle-service">
-                            <img src="img/s3.jpg" class="img-fluid" alt="">
+                            <img src="/images/s3.jpg" class="img-fluid" alt="">
                             <figcaption class="text-center">
                                 <h5 class="text-uppercase">Life Advice Looking At Window</h5>
                                 <p>Having a baby can be a nerve wrackingexp erience for new parents – not the nine months of pregnancy, I’m talking</p>
@@ -284,7 +285,7 @@
                 <div class="row">
                     <div class="col-lg-3 col-sm-6">
                         <div class="single-member">
-                            <div class="thumb relative" style="background: url(img/t1.jpg);">
+                            <div class="thumb relative" style="background: url(/images/t1.jpg);">
                                 <div class="overlay overlay-member d-flex flex-column justify-content-end align-items-center">
                                     <p class="text-white">This article is floated online with an aim to help you find the best dvd printing solution. Dvd</p>
                                     <div class="line"></div>
@@ -303,7 +304,7 @@
                     </div>
                     <div class="col-lg-3 col-sm-6">
                         <div class="single-member">
-                            <div class="thumb relative" style="background: url(img/t2.jpg);">
+                            <div class="thumb relative" style="background: url(/images/t2.jpg);">
                                 <div class="overlay overlay-member d-flex flex-column justify-content-end align-items-center">
                                     <p class="text-white">This article is floated online with an aim to help you find the best dvd printing solution. Dvd</p>
                                     <div class="line"></div>
@@ -322,7 +323,7 @@
                     </div>
                     <div class="col-lg-3 col-sm-6">
                         <div class="single-member">
-                            <div class="thumb relative" style="background: url(img/t3.jpg);">
+                            <div class="thumb relative" style="background: url(/images/t3.jpg);">
                                 <div class="overlay overlay-member d-flex flex-column justify-content-end align-items-center">
                                     <p class="text-white">This article is floated online with an aim to help you find the best dvd printing solution. Dvd</p>
                                     <div class="line"></div>
@@ -341,7 +342,7 @@
                     </div>
                     <div class="col-lg-3 col-sm-6">
                         <div class="single-member">
-                            <div class="thumb relative" style="background: url(img/t4.jpg);">
+                            <div class="thumb relative" style="background: url(/images/t4.jpg);">
                                 <div class="overlay overlay-member d-flex flex-column justify-content-end align-items-center">
                                     <p class="text-white">This article is floated online with an aim to help you find the best dvd printing solution. Dvd</p>
                                     <div class="line"></div>
@@ -475,7 +476,7 @@
             <div class="container">
                 <div class="active-testimonial-carousel">
                     <div class="single-testimonial">
-                        <img src="img/ts1.png" class="img-circle" alt="">
+                        <img src="/images/ts1.png" class="img-circle" alt="">
                         <p>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory </p>
                         <div class="author text-center">
                             <h6 class="text-uppercase"><a href="#">Mark Alviro Wiens</a></h6>
@@ -483,7 +484,7 @@
                         </div>
                     </div>
                     <div class="single-testimonial">
-                        <img src="img/ts2.png" class="img-circle" alt="">
+                        <img src="/images/ts2.png" class="img-circle" alt="">
                         <p>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory </p>
                         <div class="author text-center">
                             <h6 class="text-uppercase"><a href="#">Mark Alviro Wiens</a></h6>
@@ -491,7 +492,7 @@
                         </div>
                     </div>
                     <div class="single-testimonial">
-                        <img src="img/ts3.png" class="img-circle" alt="">
+                        <img src="/images/ts3.png" class="img-circle" alt="">
                         <p>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory </p>
                         <div class="author text-center">
                             <h6 class="text-uppercase"><a href="#">Mark Alviro Wiens</a></h6>
@@ -499,7 +500,7 @@
                         </div>
                     </div>
                     <div class="single-testimonial">
-                        <img src="img/ts3.png" class="img-circle" alt="">
+                        <img src="/images/ts3.png" class="img-circle" alt="">
                         <p>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory </p>
                         <div class="author text-center">
                             <h6 class="text-uppercase"><a href="#">Mark Alviro Wiens</a></h6>
@@ -507,7 +508,7 @@
                         </div>
                     </div>
                     <div class="single-testimonial">
-                        <img src="img/ts3.png" class="img-circle" alt="">
+                        <img src="/images/ts3.png" class="img-circle" alt="">
                         <p>Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory </p>
                         <div class="author text-center">
                             <h6 class="text-uppercase"><a href="#">Mark Alviro Wiens</a></h6>
@@ -532,7 +533,7 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-6">
                         <div class="single-publish">
-                            <img src="img/p1.jpg" class="img-fluid" alt="">
+                            <img src="/images/p1.jpg" class="img-fluid" alt="">
                             <div class="top">
                                 <div class="mb-15 d-flex">
                                     <a href="#">25 October, 2017</a>
@@ -547,7 +548,7 @@
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="single-publish">
-                            <img src="img/p2.jpg" class="img-fluid" alt="">
+                            <img src="/images/p2.jpg" class="img-fluid" alt="">
                             <div class="top">
                                 <div class="mb-15 d-flex">
                                     <a href="#">25 October, 2017</a>
@@ -562,7 +563,7 @@
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="single-publish">
-                            <img src="img/p3.jpg" class="img-fluid" alt="">
+                            <img src="/images/p3.jpg" class="img-fluid" alt="">
                             <div class="top">
                                 <div class="mb-15 d-flex">
                                     <a href="#">25 October, 2017</a>
@@ -577,7 +578,7 @@
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="single-publish">
-                            <img src="img/p4.jpg" class="img-fluid" alt="">
+                            <img src="/images/p4.jpg" class="img-fluid" alt="">
                             <div class="top">
                                 <div class="mb-15 d-flex">
                                     <a href="#">25 October, 2017</a>
@@ -659,3 +660,4 @@
             </div>
         </section>
         <!-- End Cta Area -->
+*/?>

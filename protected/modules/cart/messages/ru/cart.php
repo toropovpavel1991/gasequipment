@@ -33,9 +33,9 @@ return [
     'Store' => 'Магазин',
     'Subtotal' => 'Промежуточный итог',
     'Sum' => 'Сумма',
-    'There are no products in cart' => 'В корзине нет товаров',
+    'There are no products in cart' => 'Нет товаров',
     'Total' => 'Всего',
-    '{n} product|{n} products|{n} products|{n} products' => '{n} товар|{n} товара|{n} товаров|{n} товара',
+    '{n} product|{n} products|{n} products|{n} products' => '{n} товар в корзине|{n} товара в корзине|{n} товаров в корзине|{n} товара в корзине',
     'Not enough products in stock' => 'Недостаточно товара на складе',
     'Not enough products in stock, maximum - {n} items' => 'Недостаточно товара на складе, максимум - {n} шт.',
 ];

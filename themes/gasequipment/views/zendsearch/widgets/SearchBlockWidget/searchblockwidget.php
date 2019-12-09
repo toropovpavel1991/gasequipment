@@ -3,7 +3,7 @@
 <?= CHtml::textField(
     'q',
     '',
-    ['placeholder' => Yii::t('ZendSearchModule.zendsearch', 'Search...'), 'class' => 'form-control']
+    ['placeholder' => Yii::t('ZendSearchModule.zendsearch', 'Search by site'), 'class' => 'form-control']
 ); ?>
 <?= CHtml::submitButton(
     Yii::t('ZendSearchModule.zendsearch', 'Find!'),

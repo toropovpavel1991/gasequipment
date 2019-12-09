@@ -41,32 +41,27 @@
     <header class="default-header">
         <div class="sticky-header">
             <div class="container">
-                <div class="header-content d-flex justify-content-between align-items-center">
-                    <div class="logo">
-                        <a href="#top" class="smooth"><img src="img/logo.png" alt=""></a>
-                    </div>
-                    <div class="right-bar d-flex align-items-center">
-                        <div class="search relative">
-                            <span class="lnr lnr-magnifier"></span>
-                            <form action="#" class="search-field">
-                                <input type="text" placeholder="Search here" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search here'">
-                                <button class="search-submit"><span class="lnr lnr-magnifier"></span></button>
-                            </form>
-                        </div>
-                        <div class="header-social d-flex align-items-center">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                        </div>
-                    </div>
+                <div class="logo">
+                    <a href="/" class="smooth"><img src="/images/logo.png" alt=""></a>
+                </div>
+                <div class="search relative">
+                    <? $this->widget('application.modules.zendsearch.widgets.SearchBlockWidget'); ?>
+                </div>
+                <div class="mail">
+                    <a href="mailto:mail@mail.ru" class="mailto">mail@mail.ru</a>
+                    <a href="tel:+7(3852) 11-11-11" class="tel">+7(3852) 11-11-11</a>,
+                    <a href="tel:+7(999) 999-88-88" class="tel">+7(999) 999-88-88</a>
+                </div>
+                <div class="cart">
+                    <? $this->widget('application.modules.cart.widgets.ShoppingCartWidget'); ?>
                 </div>
             </div>
+            <nav class="top-menu">
+            <?php if (Yii::app()->hasModule('menu')): ?>
+                <?php $this->widget('application.modules.menu.widgets.MenuWidget', ['name' => 'top-menu']); ?>
+            <?php endif;?>
+            </nav>
         </div>
-        <nav>
-        <?php if (Yii::app()->hasModule('menu')): ?>
-            <?php $this->widget('application.modules.menu.widgets.MenuWidget', ['name' => 'top-menu']); ?>
-        <?php endif; ?>
-        </nav>
     </header>
 
     <?= $content ?>

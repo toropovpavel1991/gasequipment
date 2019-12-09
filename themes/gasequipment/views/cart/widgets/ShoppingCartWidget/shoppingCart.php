@@ -49,12 +49,5 @@ $currency = Yii::app()->getModule('store')->currency;
                 <?php endif; ?>
             </div>
         </div>
-        <div class="header-cart__cost">
-            <div class="header-cart__cost-title"><?= Yii::t('CartModule.cart', 'Sum'); ?>:</div>
-            <div class="header-cart__cost-price">
-                <span class="js-cart__subtotal"><?= Yii::app()->cart->getCost(); ?></span>
-                <span class="ruble"> <?= Yii::t('CartModule.cart', $currency); ?></span>
-            </div>
-        </div>
     </div>
 </div>

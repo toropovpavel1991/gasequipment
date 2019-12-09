@@ -37,6 +37,7 @@ return [
     'Results:' => 'Результаты',
     'Search by request: ' => 'Поиск по запросу: ',
     'Search' => 'Поиск',
+    'Search by site' => 'Искать на сайте',
     'Search...' => 'Поиск...',
     'Services' => 'Сервисы',
     'There is an error!' => 'Произошла ошибка!',
