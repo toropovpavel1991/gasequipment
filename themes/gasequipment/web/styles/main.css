@@ -758,6 +758,21 @@ td, th {
   height: 90px;
 }
 
+.cart-mini {
+  background-image: url('/images/cart.png');
+  background-size: 32px 32px;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+.cart-mini p {
+  display: inline;
+  height: 32px;
+  line-height: 32px;
+  margin-left: 40px;
+}
+
+
 @media (min-width: 1200px) {
   .container {
     max-width: 1190px;

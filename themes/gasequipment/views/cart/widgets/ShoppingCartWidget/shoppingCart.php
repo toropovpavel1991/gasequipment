@@ -2,19 +2,16 @@
 $currency = Yii::app()->getModule('store')->currency;
 ?>
 <div class="header__item header-cart js-cart" id="cart-widget" data-cart-widget-url="<?= Yii::app()->createUrl('/cart/cart/widget'); ?>">
-    <div class="header-cart__icon">
-        <div class="badge badge_light-blue">
-            <?= CHtml::link(Yii::app()->cart->getItemsCount(), ['/cart/cart/index']); ?>
-        </div>
-    </div>
     <div class="header-cart__text-wrap">
-        <div class="header-cart__label"><?= CHtml::link(Yii::t('CartModule.cart', 'Cart'), ['/cart/cart/index']); ?>
-            <a href="javascript:void(0);" class="header-cart__cart-toggle" id="cart-toggle-link"></a>
+        <?/*<div class="header-cart__label"><?= CHtml::link(Yii::t('CartModule.cart', 'Cart'), ['/cart/cart/index']); ?>
+            <a href="javascript:void(0);" class="header-cart__cart-toggle" id="cart-toggle-link"></a>*/?>
             <div class="cart-mini" id="cart-mini">
                 <?php if (Yii::app()->cart->isEmpty()): ?>
-                    <p><?= Yii::t('CartModule.cart', 'There are no products in cart'); ?></p>
+                    <p><?= CHtml::link(Yii::t('CartModule.cart', 'There are no products in cart'), ['/cart/cart/index']); ?></p>
+                    <?/*<p><?= Yii::t('CartModule.cart', 'There are no products in cart'); ?></p>*/?>
                 <?php else: ?>
-                    <?php foreach (Yii::app()->cart->getPositions() as $product): ?>
+                    <?= CHtml::link(Yii::app()->cart->getItemsCount(), ['/cart/cart/index']); ?>
+                    <?/*php foreach (Yii::app()->cart->getPositions() as $product): ?>
                         <?php $price = $product->getResultPrice(); ?>
                         <div class="cart-mini__item js-cart__item">
                             <div class="cart-mini__thumbnail">
@@ -40,7 +37,7 @@ $currency = Yii::app()->getModule('store')->currency;
                                 <i class="fa fa-trash-o"></i>
                             </div>
                         </div>
-                    <?php endforeach; ?>
+                    <?php endforeach; */?>
                     <div class="cart-mini__bottom">
                         <a href="<?= Yii::app()->createUrl('cart/cart/index'); ?>" class="btn btn_success">
                             <?= Yii::t('CartModule.cart', 'Make an order'); ?>
@@ -48,6 +45,6 @@ $currency = Yii::app()->getModule('store')->currency;
                     </div>
                 <?php endif; ?>
             </div>
-        </div>
+        <?/*</div>*/?>
     </div>
 </div>
