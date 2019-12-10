@@ -552,7 +552,7 @@ td, th {
 }
 
 .section-full {
-  padding: 150px 0;
+  padding: 150px 20px;
 }
 
 .section-half {
@@ -954,15 +954,42 @@ td, th {
 }
 
 .default-header {
-  position: absolute;
+  /*position: absolute;
   top: 0;
-  left: 0;
+  left: 0;*/
+  background-color: rgba(91, 97, 207, 0.6);
   width: 100%;
-  z-index: 9;
+  z-index: 9999;
+}
+
+.carousel {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  max-width: 968px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #000;
+}
+
+.carousel-item .active {
+  width: 100%;
+}
+
+.carousel-item .img-fluid {
+  width: 100%;
+  max-height: 350px;
 }
 
 .default-header .right-bar {
   position: relative;
+}
+
+.single-pricing-table .top {
+  background-image: url('/images/kotel.jpg');
 }
 
 @media (max-width: 767px) {
@@ -1291,35 +1318,35 @@ td, th {
 }
 
 .single-filter-content.content-1 {
-  background: url(/images/c1.jpg) no-repeat center center/cover;
+  background: url(/images/kotel.jpg) no-repeat center center/cover;
 }
 
 .single-filter-content.content-2 {
-  background: url(/images/c2.jpg) no-repeat center center/cover;
+  background: url(/images/kotel.jpg) no-repeat center center/cover;
 }
 
 .single-filter-content.content-3 {
-  background: url(/images/c3.jpg) no-repeat center center/cover;
+  background: url(/images/kotel.jpg) no-repeat center center/cover;
 }
 
 .single-filter-content.content-4 {
-  background: url(/images/c4.jpg) no-repeat center center/cover;
+  background: url(/images/kotel.jpg) no-repeat center center/cover;
 }
 
 .single-filter-content.content-5 {
-  background: url(/images/c5.jpg) no-repeat center center/cover;
+  background: url(/images/kotel.jpg) no-repeat center center/cover;
 }
 
 .single-filter-content.content-6 {
-  background: url(/images/c6.jpg) no-repeat center center/cover;
+  background: url(/images/kotel.jpg) no-repeat center center/cover;
 }
 
 .single-filter-content.content-7 {
-  background: url(/images/c7.jpg) no-repeat center center/cover;
+  background: url(/images/kotel.jpg) no-repeat center center/cover;
 }
 
 .single-filter-content.content-8 {
-  background: url(/images/c8.jpg) no-repeat center center/cover;
+  background: url(/images/kotel.jpg) no-repeat center center/cover;
 }
 
 .single-member {
