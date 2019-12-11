@@ -1,3 +1,5 @@
+/datarc-colorlib/
+gasequipment.sql
 *.log
 composer.phar
 *.bin

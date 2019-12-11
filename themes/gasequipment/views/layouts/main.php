@@ -70,6 +70,10 @@
         <div class="container">
             <div class="row">
                 <? $this->widget('application.modules.zendsearch.widgets.SearchBlockWidget'); ?>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
                 <nav class="top-menu">
                 <?php if (Yii::app()->hasModule('menu')): ?>
                     <?php $this->widget('application.modules.menu.widgets.MenuWidget', ['name' => 'top-menu']); ?>

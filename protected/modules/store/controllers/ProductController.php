@@ -57,6 +57,14 @@ class ProductController extends FrontController
     }
 
     /**
+     *
+     */
+    public function actionSale()
+    {
+        $this->render('sale');
+    }
+
+    /**
      * @param string $name Product slug
      * @param string $category Product category path
      * @throws CHttpException

@@ -552,7 +552,7 @@ td, th {
 }
 
 .section-full {
-  padding: 150px 20px;
+  padding: 50px 20px;
 }
 
 .section-half {
@@ -770,6 +770,21 @@ td, th {
   height: 32px;
   line-height: 32px;
   margin-left: 40px;
+}
+
+.is-sticky .sticky-header {
+  z-index: 9999;
+}
+
+.section-full .top-menu {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 
