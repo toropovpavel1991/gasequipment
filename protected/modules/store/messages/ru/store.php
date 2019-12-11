@@ -221,7 +221,7 @@ return [
     'Producers list' => 'Все бренды',
     'Producers' => 'Бренды',
     'Product catalog' => 'Каталог товаров',
-    'Product list' => 'Товары',
+    'Product list' => 'Продукция',
     'Product type is created' => 'Тип товара создан',
     'Product type is updated' => 'Тип товара обновлен',
     'Product type' => 'Тип товара',

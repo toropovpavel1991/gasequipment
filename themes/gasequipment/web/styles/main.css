@@ -555,6 +555,19 @@ td, th {
   padding: 50px 20px;
 }
 
+.list-view {
+  width: 100%;
+}
+
+.list-view .items {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .section-half {
   padding: 75px 0;
 }
