@@ -69,6 +69,7 @@
     <footer class="section-full">
         <div class="container">
             <div class="row">
+                <p class="caption-search">Поиск по сайту</p>
                 <? $this->widget('application.modules.zendsearch.widgets.SearchBlockWidget'); ?>
             </div>
         </div>
