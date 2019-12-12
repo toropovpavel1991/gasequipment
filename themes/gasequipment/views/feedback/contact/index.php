@@ -18,41 +18,18 @@ Yii::import('application.modules.install.InstallModule');
         </div>
         <div class="row">
             <div class="col-lg-6 mt-30">
-                <p>Dramatically reintermediate effective applications after high-payoff core competencies. Authoritatively optimize collaborative benefits for error-free communities. Dramatically reintermediate effective applications after high-payoff core competencies. Authoritatively optimize collaborative benefits for error-free communities.</p>
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="address mt-20">
-                            <h6 class="text-uppercase mb-15">Physical Address</h6>
-                            <p>Emperor Publishing,<br> 56/8, bir uttam qazi nuruzzaman <br> road, Dhaka - 1205</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="address mt-20">
-                            <h6 class="text-uppercase mb-15">WEb Contact</h6>
-                            <a href="tel:0000">012 (88) 017 25 656 565</a> <br>
-                            <a href="tel:0000">012 (88) 017 25 656 565</a>
-                        </div>
-                    </div>
-                </div>
+                <p>г. Новосибирск:</p>
+                <p>630056, г. Новосибирск ул. Варшавская,1 5</p>
+                <p>Тел./Факс: (383) 334-66-04; 334-66-05; 334-66-06</p>
+                <p>e-mail: nsk@: nsk</p>
             </div>
             <div class="col-lg-6 mt-30">
-                <form id="myForm" action="mail.php" method="post" class="contact-form">
-                    <div class="single-input color-2 mb-10">
-                        <input type="text" name="fname" placeholder="Full Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Full Name'" required>
-                    </div>
-                    <div class="single-input color-2 mb-10">
-                        <input type="email" name="email" placeholder="Email Address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'" required>
-                    </div>
-                    <div class="single-input color-2 mb-10">
-                        <input type="text" name="subject" placeholder="Subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Subject'" required>
-                    </div>
-
-                    <div class="single-input color-2 mb-10">
-                        <textarea name="message" placeholder="Type your message here..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Type your message here...'" required></textarea>
-                    </div>
-                    <div class="d-flex justify-content-end"><button class="mt-10 primary-btn d-inline-flex text-uppercase align-items-center">Send Message<span class="lnr lnr-arrow-right"></span></button></div>
-                    <div class="alert"></div>
-                </form>
+                <p>г. Новосибирск:</p>
+                <p>630056, г. Новосибирск ул. Варшавская,1 5</p>
+                <p>Тел./Факс: (383) 334-66-04; 334-66-05; 334-66-06</p>
+                <p>e-mail: nsk@: nsk</p>
+            </div>
+            <div class="col-lg-12 mt-30">
             </div>
         </div>
     </div>
