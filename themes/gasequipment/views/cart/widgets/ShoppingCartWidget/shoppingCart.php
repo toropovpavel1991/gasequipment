@@ -8,10 +8,10 @@ $currency = Yii::app()->getModule('store')->currency;
             <div class="cart-mini" id="cart-mini">
                 <?php if (Yii::app()->cart->isEmpty()): ?>
                     <p><?= CHtml::link(Yii::t('CartModule.cart', 'There are no products in cart'), ['/cart/cart/index']); ?></p>
-                    <?/*<p><?= Yii::t('CartModule.cart', 'There are no products in cart'); ?></p>*/?>
+                    <?php/*<p><?= Yii::t('CartModule.cart', 'There are no products in cart'); ?></p>*/?>
                 <?php else: ?>
                     <?= CHtml::link(Yii::app()->cart->getItemsCount(), ['/cart/cart/index']); ?>
-                    <?php/*php foreach (Yii::app()->cart->getPositions() as $product): ?>
+                    <?php/* foreach (Yii::app()->cart->getPositions() as $product): ?>
                         <?php $price = $product->getResultPrice(); ?>
                         <div class="cart-mini__item js-cart__item">
                             <div class="cart-mini__thumbnail">
