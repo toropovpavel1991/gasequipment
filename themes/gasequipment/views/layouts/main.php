@@ -63,6 +63,23 @@
             </nav>
         </div>
     </header>
+    <div class="main__breadcrumbs grid">
+        <div class="breadcrumbs">
+            <?php $this->widget(
+                'zii.widgets.CBreadcrumbs',
+                [
+                    'links' => $this->breadcrumbs,
+                    'tagName' => 'ul',
+                    'separator' => '',
+                    'homeLink' => '<li><a href="/">' . Yii::t('Yii.zii', 'Home') . '</a>',
+                    'activeLinkTemplate' => '<li><a href="{url}">{label}</a>',
+                    'inactiveLinkTemplate' => '<li><a>{label}</a>',
+                    'htmlOptions' => [],
+                    'encodeLabel' => false
+                ]
+            );?>
+        </div>
+    </div>
 
     <?= $content ?>
 

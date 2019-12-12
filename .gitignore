@@ -13,6 +13,7 @@ composer.phar
 *.properties
 nbproject/
 /.idea/
+public/assets/
 public/index.php
 protected/config/db.php
 */_log
