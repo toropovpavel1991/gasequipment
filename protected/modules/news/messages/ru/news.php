@@ -97,7 +97,7 @@ return [
     'On moderation' => 'На модерации',
     'Public URL' => 'Публичный урл',
     'Published' => 'Опубликовано',
-    'read...' => 'читать...',
+    'read...' => 'подробнее...',
     'Remove news' => 'Удалить новость',
     'Removing news' => 'Удаление новости',
     'Requested page was not found!' => 'Запрошенная страница не найдена!',

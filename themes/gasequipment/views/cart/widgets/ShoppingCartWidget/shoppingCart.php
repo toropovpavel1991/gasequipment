@@ -3,7 +3,7 @@ $currency = Yii::app()->getModule('store')->currency;
 ?>
 <div class="header__item header-cart js-cart" id="cart-widget" data-cart-widget-url="<?= Yii::app()->createUrl('/cart/cart/widget'); ?>">
     <div class="header-cart__text-wrap">
-        <?/*<div class="header-cart__label"><?= CHtml::link(Yii::t('CartModule.cart', 'Cart'), ['/cart/cart/index']); ?>
+        <?php/*<div class="header-cart__label"><?= CHtml::link(Yii::t('CartModule.cart', 'Cart'), ['/cart/cart/index']); ?>
             <a href="javascript:void(0);" class="header-cart__cart-toggle" id="cart-toggle-link"></a>*/?>
             <div class="cart-mini" id="cart-mini">
                 <?php if (Yii::app()->cart->isEmpty()): ?>
@@ -11,7 +11,7 @@ $currency = Yii::app()->getModule('store')->currency;
                     <?/*<p><?= Yii::t('CartModule.cart', 'There are no products in cart'); ?></p>*/?>
                 <?php else: ?>
                     <?= CHtml::link(Yii::app()->cart->getItemsCount(), ['/cart/cart/index']); ?>
-                    <?/*php foreach (Yii::app()->cart->getPositions() as $product): ?>
+                    <?php/*php foreach (Yii::app()->cart->getPositions() as $product): ?>
                         <?php $price = $product->getResultPrice(); ?>
                         <div class="cart-mini__item js-cart__item">
                             <div class="cart-mini__thumbnail">
@@ -45,6 +45,6 @@ $currency = Yii::app()->getModule('store')->currency;
                     </div>
                 <?php endif; ?>
             </div>
-        <?/*</div>*/?>
+        <?php/*</div>*/?>
     </div>
 </div>

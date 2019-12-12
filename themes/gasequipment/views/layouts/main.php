@@ -45,7 +45,7 @@
                     <a href="/" class="smooth"><img src="/images/logo.png" alt=""></a>
                 </div>
                 <div class="search relative">
-                    <? $this->widget('application.modules.zendsearch.widgets.SearchBlockWidget'); ?>
+                    <?php $this->widget('application.modules.zendsearch.widgets.SearchBlockWidget'); ?>
                 </div>
                 <div class="mail">
                     <a href="mailto:mail@mail.ru" class="mailto">mail@mail.ru</a>
@@ -53,7 +53,7 @@
                     <a href="tel:+7(999) 999-88-88" class="tel">+7(999) 999-88-88</a>
                 </div>
                 <div class="cart">
-                    <? $this->widget('application.modules.cart.widgets.ShoppingCartWidget'); ?>
+                    <?php $this->widget('application.modules.cart.widgets.ShoppingCartWidget'); ?>
                 </div>
             </div>
             <nav class="top-menu">
@@ -70,7 +70,7 @@
         <div class="container">
             <div class="row">
                 <p class="caption-search">Поиск по сайту</p>
-                <? $this->widget('application.modules.zendsearch.widgets.SearchBlockWidget'); ?>
+                <?php $this->widget('application.modules.zendsearch.widgets.SearchBlockWidget'); ?>
             </div>
         </div>
         <div class="container">
