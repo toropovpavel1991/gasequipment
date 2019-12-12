@@ -262,7 +262,7 @@ CREATE TABLE `yupe_category_category` (
   KEY `ix_yupe_category_category_parent_id` (`parent_id`),
   KEY `ix_yupe_category_category_status` (`status`),
   CONSTRAINT `fk_yupe_category_category_parent_id` FOREIGN KEY (`parent_id`) REFERENCES `yupe_category_category` (`id`) ON DELETE SET NULL ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -717,7 +717,7 @@ CREATE TABLE `yupe_menu_menu_item` (
 
 LOCK TABLES `yupe_menu_menu_item` WRITE;
 /*!40000 ALTER TABLE `yupe_menu_menu_item` DISABLE KEYS */;
-INSERT INTO `yupe_menu_menu_item` VALUES (1,0,1,1,'Главная','/','','Главная','','','','','',0,1,1,NULL,NULL,NULL),(9,0,1,0,'Акции','/news/news/index','','Акции','','','','','',0,3,1,'','',NULL),(10,0,1,0,'Контакты','/feedback/contact/index','','Контакты','','','','','',0,5,1,NULL,NULL,NULL),(11,0,1,0,'Продукция','/store/category/index','','Продукция','','','','','',0,2,1,NULL,NULL,NULL),(12,0,1,0,'Наши работы','/store/product/projects','','Наши работы','','','','','',0,4,1,'','',NULL);
+INSERT INTO `yupe_menu_menu_item` VALUES (1,0,1,1,'Главная','/','','Главная','','','','','',0,1,1,NULL,NULL,NULL),(9,0,1,0,'Акции','/news/news/index','','Акции','','','','','',0,3,1,'','',NULL),(10,0,1,0,'Контакты','/feedback/contact/index','','Контакты','','','','','',0,5,1,NULL,NULL,NULL),(11,0,1,0,'Продукция','/store/category/index','','Продукция','','','','','',0,2,1,NULL,NULL,NULL),(12,0,1,0,'Наши работы','/store/producer/index','','Наши работы','','','','','',0,4,1,'','',NULL);
 /*!40000 ALTER TABLE `yupe_menu_menu_item` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -782,7 +782,7 @@ CREATE TABLE `yupe_news_news` (
   KEY `ix_yupe_news_news_date` (`date`),
   CONSTRAINT `fk_yupe_news_news_category_id` FOREIGN KEY (`category_id`) REFERENCES `yupe_category_category` (`id`) ON DELETE SET NULL ON UPDATE NO ACTION,
   CONSTRAINT `fk_yupe_news_news_user_id` FOREIGN KEY (`user_id`) REFERENCES `yupe_user_user` (`id`) ON DELETE SET NULL ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -791,7 +791,7 @@ CREATE TABLE `yupe_news_news` (
 
 LOCK TABLES `yupe_news_news` WRITE;
 /*!40000 ALTER TABLE `yupe_news_news` DISABLE KEYS */;
-INSERT INTO `yupe_news_news` VALUES (1,1,'ru','2019-12-11 14:27:23','2019-12-11 14:29:10','2019-12-11','Акция 1','akciya-1','','<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>','460685ec7e012dd1a265e00bbdd61297.jpg','',1,1,0,'','',''),(2,1,'ru','2019-12-11 14:28:44','2019-12-11 14:28:58','2019-12-11','Акция 2','akciya-2','','<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>','e4ff82ed0f76cb7026dc1a821d0857df.jpg','',1,1,0,'','','');
+INSERT INTO `yupe_news_news` VALUES (1,1,'ru','2019-12-11 14:27:23','2019-12-12 10:44:21','2019-12-11','Акция 1','akciya-1','','<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>','460685ec7e012dd1a265e00bbdd61297.jpg','',1,1,0,'','',''),(2,1,'ru','2019-12-11 14:28:44','2019-12-11 14:28:58','2019-12-11','Акция 2','akciya-2','','<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>','e4ff82ed0f76cb7026dc1a821d0857df.jpg','',1,1,0,'','',''),(3,1,'ru','2019-12-12 14:20:09','2019-12-12 14:20:34','2019-12-12','Акция 3','akciya-3','','<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>','0632167b91c69e92ae47597dee7c4e3a.jpg','',1,1,0,'','','');
 /*!40000 ALTER TABLE `yupe_news_news` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1082,7 +1082,7 @@ CREATE TABLE `yupe_store_category` (
   KEY `ix_yupe_store_category_status` (`status`),
   KEY `yupe_store_category_external_id_ix` (`external_id`),
   CONSTRAINT `fk_yupe_store_category_parent` FOREIGN KEY (`parent_id`) REFERENCES `yupe_store_category` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1091,7 +1091,7 @@ CREATE TABLE `yupe_store_category` (
 
 LOCK TABLES `yupe_store_category` WRITE;
 /*!40000 ALTER TABLE `yupe_store_category` DISABLE KEYS */;
-INSERT INTO `yupe_store_category` VALUES (1,NULL,'ballony-otechestvennye','Баллоны отечественные','c11f5e0c6e231565891767aa3f865206.jpg','','','','','',1,1,NULL,'','','','',''),(2,NULL,'italyanskoe-oborudovanie-i-komplektuyushchie','Итальянское оборудование и комплектующие','34e03a61053f09cd88dd0cdfe94e2d6a.jpg','','','','','',1,2,NULL,'','','','',''),(3,NULL,'komplektuyushchie-vprysk-n','Комплектующие ВПРЫСК (н)','1e693708f50f9a2c582e9e47023252e5.jpg','','','','','',1,3,NULL,'','','','',''),(4,NULL,'shlangi','Шланги','af6eae57222b731d82cfff7176a6317b.jpg','','','','','',1,4,NULL,'','','','',''),(5,NULL,'elektronika-rezol','Электроника Резол','18ad429ad5e44fbe92bb57710c8041a7.jpg','','','','','',1,5,NULL,'','','','',''),(6,NULL,'smesiteli','Смесители','f8a52954aef0249da4a5d678e3663372.jpg','','','','','',1,6,NULL,'','','','',''),(7,NULL,'servisnoe-oborudovanie','Сервисное оборудование','f20ff9a9cadf2c1729fd0ced93a0d3bc.jpg','','','','','',1,7,NULL,'','','','',''),(8,NULL,'remkomplekty-i-filtry','Ремкомплекты и фильтры','fe1e52873a1c8fc5b5d37bf59d4d486b.jpg','','','','','',1,8,NULL,'','','','','');
+INSERT INTO `yupe_store_category` VALUES (1,NULL,'ballony-otechestvennye','Баллоны отечественные','c11f5e0c6e231565891767aa3f865206.jpg','','','','','',1,1,NULL,'','','','',''),(2,NULL,'italyanskoe-oborudovanie-i-komplektuyushchie','Итальянское оборудование и комплектующие','34e03a61053f09cd88dd0cdfe94e2d6a.jpg','','','','','',1,2,NULL,'','','','',''),(3,NULL,'komplektuyushchie-vprysk-n','Комплектующие ВПРЫСК (н)','1e693708f50f9a2c582e9e47023252e5.jpg','','','','','',1,3,NULL,'','','','',''),(4,NULL,'shlangi','Шланги','af6eae57222b731d82cfff7176a6317b.jpg','','','','','',1,4,NULL,'','','','',''),(5,NULL,'elektronika-rezol','Электроника Резол','18ad429ad5e44fbe92bb57710c8041a7.jpg','','','','','',1,5,NULL,'','','','',''),(6,NULL,'smesiteli','Смесители','f8a52954aef0249da4a5d678e3663372.jpg','','','','','',1,6,NULL,'','','','',''),(7,NULL,'servisnoe-oborudovanie','Сервисное оборудование','f20ff9a9cadf2c1729fd0ced93a0d3bc.jpg','','','','','',1,7,NULL,'','','','',''),(8,NULL,'remkomplekty-i-filtry','Ремкомплекты и фильтры','fe1e52873a1c8fc5b5d37bf59d4d486b.jpg','','','','','',1,8,NULL,'','','','',''),(9,1,'toroidalnye','Тороидальные','5d29ead20fa7e521a7b804d4a6de3cc2.jpg','','','','','',1,9,NULL,'','','','',''),(10,1,'cilindricheskie','Цилиндрические','2c57b2723c9d451b19cecd7c1d0bc756.jpg','','','','','',1,10,NULL,'','','','','');
 /*!40000 ALTER TABLE `yupe_store_category` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1392,7 +1392,7 @@ CREATE TABLE `yupe_store_producer` (
   PRIMARY KEY (`id`),
   KEY `ix_yupe_store_producer_slug` (`slug`),
   KEY `ix_yupe_store_producer_sort` (`sort`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1401,6 +1401,7 @@ CREATE TABLE `yupe_store_producer` (
 
 LOCK TABLES `yupe_store_producer` WRITE;
 /*!40000 ALTER TABLE `yupe_store_producer` DISABLE KEYS */;
+INSERT INTO `yupe_store_producer` VALUES (3,'job1','Работа 1','job1','8311ec6ff1ada25eb94afca45d2a84de.jpg','','','','','',1,2,''),(4,'job2','Работа 2','job2','ae7c5da70eab5b7fe2afba99be6b09b4.jpg','','','','','',1,3,''),(5,'job3','Работа 3','job3','62323ec6b38a39a2e80b755f8df3102e.jpg','','','','','',1,4,'');
 /*!40000 ALTER TABLE `yupe_store_producer` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1475,7 +1476,7 @@ CREATE TABLE `yupe_store_product` (
 
 LOCK TABLES `yupe_store_product` WRITE;
 /*!40000 ALTER TABLE `yupe_store_product` DISABLE KEYS */;
-INSERT INTO `yupe_store_product` VALUES (1,NULL,NULL,1,'','Тор. баллон ВНУТР 42 л  600*200 НЗГА','tor-ballon-vnutr-42-l-600200-nzga',0.000,NULL,NULL,'<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p><div><img src=\"https://d1h0x9w88ijkiq.cloudfront.net/3190/images/transparent.gif\" alt=\"transparent.gif\" /><div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p></div></div><div><img src=\"https://d1h0x9w88ijkiq.cloudfront.net/3190/images/transparent.gif\" alt=\"transparent.gif\" /><div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p></div></div>','','',0,NULL,NULL,NULL,NULL,NULL,1,1,'2019-12-11 11:37:56','2019-12-11 12:09:43','','','','e98cb7bbcd8b1fd584f45ddb1cce683e.jpg',NULL,NULL,NULL,1,NULL,'','','','','');
+INSERT INTO `yupe_store_product` VALUES (1,NULL,NULL,9,'','Тор. баллон ВНУТР 42 л  600*200 НЗГА','tor-ballon-vnutr-42-l-600200-nzga',10000000.000,NULL,NULL,'<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p><div><img src=\"https://d1h0x9w88ijkiq.cloudfront.net/3190/images/transparent.gif\" alt=\"transparent.gif\" /><div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p></div></div><div><img src=\"https://d1h0x9w88ijkiq.cloudfront.net/3190/images/transparent.gif\" alt=\"transparent.gif\" /><div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p></div></div>','','',0,NULL,NULL,NULL,NULL,NULL,1,1,'2019-12-11 11:37:56','2019-12-12 15:04:19','','','','e98cb7bbcd8b1fd584f45ddb1cce683e.jpg',NULL,NULL,NULL,1,NULL,'','','','','');
 /*!40000 ALTER TABLE `yupe_store_product` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1762,7 +1763,7 @@ CREATE TABLE `yupe_user_tokens` (
   PRIMARY KEY (`id`),
   KEY `ix_yupe_user_tokens_user_id` (`user_id`),
   CONSTRAINT `fk_yupe_user_tokens_user_id` FOREIGN KEY (`user_id`) REFERENCES `yupe_user_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1771,7 +1772,7 @@ CREATE TABLE `yupe_user_tokens` (
 
 LOCK TABLES `yupe_user_tokens` WRITE;
 /*!40000 ALTER TABLE `yupe_user_tokens` DISABLE KEYS */;
-INSERT INTO `yupe_user_tokens` VALUES (1,1,'LTcZC1~TAAX_IQC9FWmrYcPHmFabMhJC',2,0,'2019-12-06 10:59:21','2019-12-06 10:59:21','127.0.0.1','2019-12-07 10:59:21'),(5,1,'f~Qh6cg64j~RUXhhEBQ7qCtxY8mwbEgZ',4,0,'2019-12-11 10:03:10','2019-12-11 10:03:10','127.0.0.1','2019-12-18 10:03:10');
+INSERT INTO `yupe_user_tokens` VALUES (1,1,'LTcZC1~TAAX_IQC9FWmrYcPHmFabMhJC',2,0,'2019-12-06 10:59:21','2019-12-06 10:59:21','127.0.0.1','2019-12-07 10:59:21'),(6,1,'z8MNNrFT0kHQ4Ls9eVTRnbeGmm73Scnp',4,0,'2019-12-12 10:41:54','2019-12-12 10:41:54','127.0.0.1','2019-12-19 10:41:54');
 /*!40000 ALTER TABLE `yupe_user_tokens` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1816,7 +1817,7 @@ CREATE TABLE `yupe_user_user` (
 
 LOCK TABLES `yupe_user_user` WRITE;
 /*!40000 ALTER TABLE `yupe_user_user` DISABLE KEYS */;
-INSERT INTO `yupe_user_user` VALUES (1,'2019-12-05 12:48:24','','','','admin','toropovpavel1991@gmail.com',0,NULL,'','','',1,1,'2019-12-11 10:03:09','2019-12-05 12:48:24',NULL,'$2y$13$o.1zkavTmIR2Khu4wEDwYuY60Guo5He.Dc.2ym/zzCtaQFlYjHVee',1,NULL);
+INSERT INTO `yupe_user_user` VALUES (1,'2019-12-05 12:48:24','','','','admin','toropovpavel1991@gmail.com',0,NULL,'','','',1,1,'2019-12-12 10:41:54','2019-12-05 12:48:24',NULL,'$2y$13$o.1zkavTmIR2Khu4wEDwYuY60Guo5He.Dc.2ym/zzCtaQFlYjHVee',1,NULL);
 /*!40000 ALTER TABLE `yupe_user_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1971,4 +1972,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-12-11 18:25:35
+-- Dump completed on 2019-12-12 18:14:12
