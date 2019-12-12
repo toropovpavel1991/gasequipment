@@ -1,15 +1,21 @@
 <?php $this->title = Yii::app()->getModule('yupe')->siteName; ?>
 <div class="content body-content">
     <div id="carousel" class="carousel slide" data-ride="carousel">
+      <!-- Индикаторы -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel" data-slide-to="1"></li>
+        <li data-target="#carousel" data-slide-to="2"></li>
+      </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img class="img-fluid" src="/images/kotel.jpg" alt="image">
+          <img class="img-fluid" src="/images/kotel.jpg" alt="...">
         </div>
         <div class="carousel-item">
-          <img class="img-fluid" src="/images/kotel.jpg" alt="image">
+          <img class="img-fluid" src="/images/c3.jpg" alt="...">
         </div>
         <div class="carousel-item">
-           <img class="img-fluid" src="/images/kotel.jpg" alt="image">
+           <img class="img-fluid" src="/images/c1.jpg" alt="...">
         </div>
       </div>
       <!-- Элементы управления -->

@@ -30,6 +30,7 @@ Yii::import('application.modules.install.InstallModule');
                 <p>e-mail: nsk@: nsk</p>
             </div>
             <div class="col-lg-12 mt-30">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9185.268076665465!2d82.95898896864388!3d54.86224426778664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42dfdc91fe3b39b9%3A0xeca626f1609defb2!2z0YPQuy4g0JLQsNGA0YjQsNCy0YHQutCw0Y8sIDE1LCDQndC-0LLQvtGB0LjQsdC40YDRgdC6LCDQndC-0LLQvtGB0LjQsdC40YDRgdC60LDRjyDQvtCx0LsuLCA2MzAwNTc!5e0!3m2!1sru!2sru!4v1576141819301!5m2!1sru!2sru" width="800" height="600" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
             </div>
         </div>
     </div>

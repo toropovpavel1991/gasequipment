@@ -14,14 +14,14 @@ $this->keywords = $brand->meta_keywords;
 $this->breadcrumbs = [
     Yii::t("StoreModule.store", 'Catalog') => ['/store/product/index'],
     Yii::t('StoreModule.store', 'Producers list') => ['/store/producer/index'],
-    Yii::t('StoreModule.store', 'The products of the manufacturer') . ' "' . CHtml::encode($brand->name) . '"'
+    Yii::t('StoreModule.store', 'The products of the manufacturer') . CHtml::encode($brand->name)
 ];
 
 ?>
 <div class="main__title grid">
     <h1 class="h2">
         <?= Yii::t('StoreModule.store', 'The products of the manufacturer'); ?>
-        &laquo;<?= CHtml::encode($brand->name) ?>&raquo;
+        <?= CHtml::encode($brand->name) ?>
     </h1>
 </div>
 

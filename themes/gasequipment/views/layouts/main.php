@@ -63,6 +63,7 @@
             </nav>
         </div>
     </header>
+    <?php /*
     <div class="main__breadcrumbs grid">
         <div class="breadcrumbs">
             <?php $this->widget(
@@ -80,6 +81,7 @@
             );?>
         </div>
     </div>
+    */?>
 
     <?= $content ?>
 
