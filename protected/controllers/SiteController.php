@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Дефолтный контроллер сайта:
  *
@@ -22,36 +23,9 @@ class SiteController extends FrontController
      * @return void
      */
 
-    /**
-     * @var ProductRepository
-     */
-    protected $productRepository;
-
-    /**
-     * @var StoreCategoryRepository
-     */
-    protected $categoryRepository;
-
-    /**
-     * @var AttributeFilter
-     */
-    protected $attributeFilter;
-
-    public function init()
-    {
-        parent::init();
-        $this->productRepository = Yii::app()->getComponent('productRepository');
-        $this->attributeFilter = Yii::app()->getComponent('attributesFilter');
-        $this->categoryRepository = Yii::app()->getComponent('categoryRepository');
-    }
-
-
     public function actionIndex()
     {
-        $this->render('index',
-            [
-                'dataProvider' => $this->categoryRepository->getAllDataProvider(),
-            ]);
+        $this->render('index');
     }
 
     /**
