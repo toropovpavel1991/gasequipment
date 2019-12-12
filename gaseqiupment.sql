@@ -717,7 +717,7 @@ CREATE TABLE `yupe_menu_menu_item` (
 
 LOCK TABLES `yupe_menu_menu_item` WRITE;
 /*!40000 ALTER TABLE `yupe_menu_menu_item` DISABLE KEYS */;
-INSERT INTO `yupe_menu_menu_item` VALUES (1,0,1,1,'Главная','/site/index','','Главная','','','','','',0,1,1,NULL,NULL,NULL),(9,0,1,0,'Акции','/news/news/index','','Акции','','','','','',0,3,1,'','',NULL),(10,0,1,0,'Контакты','/feedback/contact/index','','Контакты','','','','','',0,5,1,NULL,NULL,NULL),(11,0,1,0,'Продукция','/store/category/index','','Продукция','','','','','',0,2,1,NULL,NULL,NULL),(12,0,1,0,'Наши работы','/store/product/projects','','Наши работы','','','','','',0,4,1,'','',NULL);
+INSERT INTO `yupe_menu_menu_item` VALUES (1,0,1,1,'Главная','/','','Главная','','','','','',0,1,1,NULL,NULL,NULL),(9,0,1,0,'Акции','/news/news/index','','Акции','','','','','',0,3,1,'','',NULL),(10,0,1,0,'Контакты','/feedback/contact/index','','Контакты','','','','','',0,5,1,NULL,NULL,NULL),(11,0,1,0,'Продукция','/store/category/index','','Продукция','','','','','',0,2,1,NULL,NULL,NULL),(12,0,1,0,'Наши работы','/store/product/projects','','Наши работы','','','','','',0,4,1,'','',NULL);
 /*!40000 ALTER TABLE `yupe_menu_menu_item` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1971,4 +1971,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-12-11 14:59:33
+-- Dump completed on 2019-12-11 18:25:35

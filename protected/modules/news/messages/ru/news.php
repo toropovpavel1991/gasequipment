@@ -92,7 +92,7 @@ return [
     'News lists' => 'Новости',
     'News management' => 'Управление новостями',
     'News per page' => 'Новостей на странице',
-    'News' => 'Новости',
+    'News' => 'Акции',
     'no' => 'нет',
     'On moderation' => 'На модерации',
     'Public URL' => 'Публичный урл',
