@@ -10,7 +10,7 @@ $this->description = $category->getMetaDescription();
 $this->keywords =  $category->getMetaKeywords();
 $this->canonical = $category->getMetaCanonical();
 
-$this->breadcrumbs = [Yii::t("StoreModule.store", "Catalog") => ['/store/product/index']];
+$this->breadcrumbs = [Yii::t("StoreModule.store", "Catalog") => ['/store/category/_item']];
 
 $this->breadcrumbs = array_merge(
     $this->breadcrumbs,
@@ -20,7 +20,7 @@ $this->breadcrumbs = array_merge(
 <?php $this->widget(
                 'zii.widgets.CListView', [
                     'dataProvider' => $dataProvider,
-                    'itemView' => '//store/product/_item',
+                    'itemView' => '//store/category/_item',
                     'template' => '
                         <div class="catalog-controls">
                             <div class="catalog-controls__col">{sorter}</div>

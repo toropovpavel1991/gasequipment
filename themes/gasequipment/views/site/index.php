@@ -40,26 +40,32 @@
                 </div>
             </div>
         </div>
-        <div class="catalog__category-item">
-            <div id="filter-content" class="row no-gutters mt-70">
-                <?php $this->widget('zii.widgets.CListView', [
-                    'dataProvider' => $dataProvider,
-                    'itemView' => '_item',
-                    'template' => '{items} {pager}',
-                    //'itemsCssClass' => 'catalog__category-items',
-                    //'pagerCssClass' => 'catalog__pagination',
-                    'pager' => [
-                        'header' => '',
-                        'prevPageLabel' => '<i class="fa fa-long-arrow-left"></i>',
-                        'nextPageLabel' => '<i class="fa fa-long-arrow-right"></i>',
-                        'firstPageLabel' => false,
-                        'lastPageLabel' => false,
-                        'htmlOptions' => [
-                            'class' => 'pagination'
-                        ]
-                    ]
-                ]);?>
+        <div id="filter-content" class="row no-gutters mt-70">
+            <div class="mix category-1 col-lg-3 col-md-4 col-sm-6 single-filter-content content-1" data-myorder="1">
+                <a href="">Баллоны отчественные</a>
             </div>
+            <div class="mix category-1 category-5 category-3 category-5 col-lg-3 col-md-4 col-sm-6 single-filter-content content-2" data-myorder="2">
+                <a href="">Итальянское оборудование и комплектующие</a>
+            </div>
+            <div class="mix category-1 category-5 col-lg-3 col-md-4 col-sm-6 single-filter-content content-3" data-myorder="3">
+                <a href="">Комплектующие ВПРЫСК (н)</a>
+            </div>
+            <div class="mix category-2 category-3 category-6 col-lg-3 col-md-4 col-sm-6 single-filter-content content-4" data-myorder="4">
+                <a href="">Шланги</a>
+            </div>
+            <div class="mix category-1 category-4 category-5 col-lg-3 col-md-4 col-sm-6 single-filter-content content-5" data-myorder="5">
+                <a href="">Электроника Резол</a>
+            </div>
+            <div class="mix category-1 category-3 category-5 category-6 col-lg-3 col-md-4 col-sm-6 single-filter-content content-6" data-myorder="6">
+                <a href="">Смесители</a>
+            </div>
+            <div class="mix category-2 category-4 category-3 col-lg-3 col-md-4 col-sm-6 single-filter-content content-7" data-myorder="7">
+                <a href="">Сервисное оборудование</a>
+            </div>
+            <div class="mix category-2 category-6 category-5 col-lg-3 col-md-4 col-sm-6 single-filter-content content-8" data-myorder="8">
+                <a href="">Ремкомплекты и фильтры</a>
+            </div>
+            <a href="/store/categories" class="full-link">Смотреть все---></a>
         </div>
     </section>
     <section class="section-full studio-area">
@@ -90,10 +96,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="single-pricing-table">
                         <div class="top">
-                            
+                            <img src="/images/kotel.jpg" class="action-preview">
                         </div>
 
                         <div class="bottom text-center">
@@ -106,26 +112,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="single-pricing-table">
                         <div class="top">
-                            
-                        </div>
-
-                        <div class="bottom text-center">
-                            <ul class="feature text-center">
-                                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                                Aenean euismod bibendum laoreet. 
-                                Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. 
-                                Proin sodales pulvinar tempor.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="single-pricing-table">
-                        <div class="top">
-                            
+                            <img src="/images/kotel.jpg" class="action-preview">
                         </div>
 
                         <div class="bottom text-center">
@@ -139,6 +129,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum
                     </div>
                 </div>
             </div>
+            <a href="/news" class="full-link">Смотреть все---></a>
         </div>
     </section>
 </div>
