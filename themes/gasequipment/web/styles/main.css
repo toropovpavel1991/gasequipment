@@ -893,6 +893,34 @@ a.full-link {
   .no-flex-xs {
     display: block !important;
   }
+  .sticky-header {
+    width: 100% !important;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+  }
+  .sticky-header .container {
+    height: 100% !important;
+  }
+  .logo {
+    width: 100%
+  }
+  .search {
+    display: none;
+  }
+  .mail {
+    display: none;
+  }
+  .cart {
+    width: 100%;
+  }
+  .top-menu {
+    width: 100%;
+  }
+  iframe {
+    width: 100%;
+  }
 }
 
 .row.no-margin {
