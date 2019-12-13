@@ -18,17 +18,6 @@
            <img class="img-fluid" src="/images/c1.jpg" alt="...">
         </div>
       </div>
-      <!-- Элементы управления -->
-      <?php/*
-      <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Предыдущий</span>
-      </a>
-      <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Следующий</span>
-      </a>
-      */?>
     </div>
     <section id="protfolio" class="section-full">
         <div class="container">
