@@ -1,15 +1,15 @@
 <?php $this->title = Yii::app()->getModule('yupe')->siteName; ?>
 <div class="content body-content">
-    <div id="carousel" class="carousel slide" data-ride="carousel">
+    <div id="carousel" class="carousel slide row" data-ride="carousel">
       <!-- Индикаторы -->
-      <ol class="carousel-indicators">
+      <ol class="carousel-indicators row justify-content-start">
         <li data-target="#carousel" data-slide-to="0" class="active"></li>
         <li data-target="#carousel" data-slide-to="1"></li>
         <li data-target="#carousel" data-slide-to="2"></li>
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img class="img-fluid" src="/images/kotel.jpg" alt="...">
+          <img class="img-fluid" src="/images/c1.jpg" alt="...">
         </div>
         <div class="carousel-item">
           <img class="img-fluid" src="/images/c3.jpg" alt="...">
@@ -19,6 +19,7 @@
         </div>
       </div>
       <!-- Элементы управления -->
+      <?php/*
       <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Предыдущий</span>
@@ -27,6 +28,7 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Следующий</span>
       </a>
+      */?>
     </div>
     <section id="protfolio" class="section-full">
         <div class="container">

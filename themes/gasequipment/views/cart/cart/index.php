@@ -48,7 +48,6 @@ $this->breadcrumbs = [
 
     <div class="main__cart-box grid">
         <div class="order-box js-cart">
-
             <?php $this->widget('yupe\widgets\YFlashMessages'); ?>
 
             <div class="order-box__header order-box__header_black">

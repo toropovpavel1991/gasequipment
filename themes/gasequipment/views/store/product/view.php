@@ -17,6 +17,32 @@ $this->breadcrumbs = array_merge(
 ?>
 <div class="main__product-description grid" itemscope itemtype="http://schema.org/Product">
     <div class="product-description">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12 mt-30">
+                    <div class="product-area-title text-center">
+                        <h2 class="h1"><?= CHtml::encode($product->getTitle()); ?></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="row col-lg-3">
+                <div data-product-image class="product-gallery__img-wrap">
+                    <img src="<?= StoreImage::product($product); ?>"
+                         class="product-gallery__main-img"
+                         alt="<?= CHtml::encode($product->getImageAlt()); ?>"
+                         title="<?= CHtml::encode($product->getImageTitle()); ?>"
+                    >
+                </div>
+            </div>
+            <div class="row col-lg-8">
+                 <div class="wysiwyg" itemprop="description">
+                    <?= $product->description; ?>
+                </div>
+            </div>
+        </div>
+        <?php/*
         <div class="product-description__img-block grid-module-6">
             <div class="product-gallery js-product-gallery">
                 <div class="product-gallery__body">
@@ -322,6 +348,5 @@ $this->breadcrumbs = array_merge(
         </div>
     </div>
 </div>
-
 <?php $this->widget('application.modules.store.widgets.LinkedProductsWidget', ['product' => $product, 'code' => null,]); ?>
-
+*/?>

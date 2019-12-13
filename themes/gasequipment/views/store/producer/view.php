@@ -18,6 +18,26 @@ $this->breadcrumbs = [
 ];
 
 ?>
+<div class="container mt-30">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="product-area-title text-center">
+                <h2 class="h1"><?= CHtml::encode($brand->name) ?></h2>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+    	<div class="col-lg-8">
+            <?= $brand->description ?>
+        </div>
+    </div>
+    <div class="row mb-40">
+    	<div class="col-lg-4">
+            <img src="<?= StoreImage::producer($brand, 435, 250);?>" alt="<?= CHtml::encode($brand->name); ?>">
+        </div>
+    </div>
+</div>
+<?php/*
 <div class="main__title grid">
     <h1 class="h2">
         <?= Yii::t('StoreModule.store', 'The products of the manufacturer'); ?>
@@ -79,3 +99,4 @@ $this->breadcrumbs = [
         </div>
     </div>
 </div>
+*/?>
