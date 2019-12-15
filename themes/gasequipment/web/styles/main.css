@@ -737,7 +737,6 @@ td, th {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  height: 100px;
 }
 
 .default-header .top-menu {
@@ -801,7 +800,8 @@ td, th {
 }
 
 .caption-search {
-  font-size: 22px;
+  font-size: 14px;
+  font-weight: 700;
   margin-right: 30px;
   margin-top: auto;
   margin-bottom: auto;
@@ -854,13 +854,20 @@ td, th {
   height: 100%;
 }
 
+.carousel-indicators {
+	bottom: 30px;
+	left: -10%;
+}
+
 .carousel-indicators li {
   width: 40px;
   height: 20px;
-  border-radius: 30px 20px 30px 20px;
+  border-radius: 20px/10px;
+  cursor: pointer;
 }
 
 #protfolio .single-filter-content {
+  height: 188px;
   text-align: center;
   margin-bottom: 70px;
 }
@@ -1089,14 +1096,11 @@ a.full-link {
 }
 
 .default-header {
-  /*position: absolute;
-  top: 0;
-  left: 0;*/
-  background-color: rgba(91, 97, 207, 0.6);
+  background-color: rgba(60,64,143,0.95);
   width: 100%;
   z-index: 9999;
 }
-
+/*
 .carousel {
   position: relative;
   margin-left: auto;
@@ -1104,7 +1108,7 @@ a.full-link {
   margin-top: 20px;
   max-width: 968px;
 }
-
+*/
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   background-color: #000;
@@ -1189,9 +1193,12 @@ a.full-link {
 }
 
 .is-sticky .sticky-header {
+  background-color: rgba(60,64,143,0.95);
+  /*
   background: -moz-linear-gradient(left, rgba(60, 64, 143, 0.95) 0%, rgba(91, 97, 207, 0.95) 100%);
   background: -webkit-linear-gradient(left, rgba(60, 64, 143, 0.95) 0%, rgba(91, 97, 207, 0.95) 100%);
   background: linear-gradient(to right, rgba(60, 64, 143, 0.95) 0%, rgba(91, 97, 207, 0.95) 100%);
+  */
 }
 
 .search {

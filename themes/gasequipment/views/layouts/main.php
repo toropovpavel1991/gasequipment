@@ -39,7 +39,7 @@
 <body>
 <?php \yupe\components\TemplateEvent::fire(ShopThemeEvents::BODY_START);?>
     <header class="default-header">
-        <div class="sticky-header">
+        <div class="is-sticky sticky-header">
             <div class="container">
                 <div class="logo">
                     <a href="/" class="smooth"><img src="/images/logo.png" alt=""></a>
@@ -56,11 +56,13 @@
                     <?php $this->widget('application.modules.cart.widgets.ShoppingCartWidget'); ?>
                 </div>
             </div>
-            <nav class="top-menu">
-            <?php if (Yii::app()->hasModule('menu')): ?>
-                <?php $this->widget('application.modules.menu.widgets.MenuWidget', ['name' => 'top-menu']); ?>
-            <?php endif;?>
-            </nav>
+            <div class="container">
+                <nav class="top-menu">
+                <?php if (Yii::app()->hasModule('menu')): ?>
+                    <?php $this->widget('application.modules.menu.widgets.MenuWidget', ['name' => 'top-menu']); ?>
+                <?php endif;?>
+                </nav>
+            </div>
         </div>
     </header>
 

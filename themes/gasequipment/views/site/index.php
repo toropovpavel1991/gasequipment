@@ -1,6 +1,6 @@
 <?php $this->title = Yii::app()->getModule('yupe')->siteName; ?>
 <div class="content body-content">
-    <div id="carousel" class="carousel slide row" data-ride="carousel">
+    <div id="carousel" class="carousel slide section-full" data-ride="carousel">
       <!-- Индикаторы -->
       <ol class="carousel-indicators row justify-content-start">
         <li data-target="#carousel" data-slide-to="0" class="active"></li>
