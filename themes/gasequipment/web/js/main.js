@@ -14,11 +14,11 @@ $(document).ready(function(){
  //        $(".preloader").fadeOut("slow");;
  //    });
 	
-	$(".fullscreen").css("height", window_height)
-	$(".fitscreen").css("height", fitscreen);
+	//$(".fullscreen").css("height", window_height)
+	//$(".fitscreen").css("height", fitscreen);
 
     //-------- Active Sticky Js ----------//
-     $(".sticky-header").sticky({topSpacing:0});
+     //$(".sticky-header").sticky({topSpacing:0});
      
      // -------   Active Mobile Menu-----//
 

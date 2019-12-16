@@ -31,28 +31,28 @@
         </div>
         <div id="filter-content" class="row no-gutters mt-70">
             <div class="mix category-1 col-lg-3 col-md-4 col-sm-6 single-filter-content content-1" data-myorder="1">
-                <a href="">Баллоны отчественные</a>
+                <a href="/store/ballony-otechestvennye" class="primary-btn align-items-center category-link">Баллоны отчественные</a>
             </div>
             <div class="mix category-1 category-5 category-3 category-5 col-lg-3 col-md-4 col-sm-6 single-filter-content content-2" data-myorder="2">
-                <a href="">Итальянское оборудование и комплектующие</a>
+                <a href="/store/italyanskoe-oborudovanie-i-komplektuyushchie" class="primary-btn align-items-center category-link">Итальянское оборудование и комплектующие</a>
             </div>
             <div class="mix category-1 category-5 col-lg-3 col-md-4 col-sm-6 single-filter-content content-3" data-myorder="3">
-                <a href="">Комплектующие ВПРЫСК (н)</a>
+                <a href="/store/komplektuyushchie-vprysk-n" class="primary-btn align-items-center category-link">Комплектующие ВПРЫСК (н)</a>
             </div>
             <div class="mix category-2 category-3 category-6 col-lg-3 col-md-4 col-sm-6 single-filter-content content-4" data-myorder="4">
-                <a href="">Шланги</a>
+                <a href="/store/shlangi" class="primary-btn align-items-center category-link">Шланги</a>
             </div>
             <div class="mix category-1 category-4 category-5 col-lg-3 col-md-4 col-sm-6 single-filter-content content-5" data-myorder="5">
-                <a href="">Электроника Резол</a>
+                <a href="/store/elektronika-rezol" class="primary-btn align-items-center category-link">Электроника Резол</a>
             </div>
             <div class="mix category-1 category-3 category-5 category-6 col-lg-3 col-md-4 col-sm-6 single-filter-content content-6" data-myorder="6">
-                <a href="">Смесители</a>
+                <a href="/store/smesiteli" class="primary-btn align-items-center category-link">Смесители</a>
             </div>
             <div class="mix category-2 category-4 category-3 col-lg-3 col-md-4 col-sm-6 single-filter-content content-7" data-myorder="7">
-                <a href="">Сервисное оборудование</a>
+                <a href="/store/servisnoe-oborudovanie" class="primary-btn align-items-center category-link">Сервисное оборудование</a>
             </div>
             <div class="mix category-2 category-6 category-5 col-lg-3 col-md-4 col-sm-6 single-filter-content content-8" data-myorder="8">
-                <a href="">Ремкомплекты и фильтры</a>
+                <a href="/store/remkomplekty-i-filtry" class="primary-btn align-items-center category-link">Ремкомплекты и фильтры</a>
             </div>
             <a href="/store/categories" class="full-link">Смотреть все---></a>
         </div>
